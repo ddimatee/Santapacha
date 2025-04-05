@@ -1,80 +1,93 @@
+/* Estilos generales para el cuerpo de la página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Fuente */
     margin: 0;
-    display: flex;
-    background-color: rgb(0, 115, 230);
-    color: white;
+    display: flex; /* Flex para organizar sidebar + contenido */
+    background-color: rgb(0, 115, 230); /* Fondo azul */
+    color: white; /* Texto blanco por defecto */
 }
-.sidebar{
+
+/* Estilos para la barra lateral (sidebar) */
+.sidebar {
     width: 250px;
     color: white;
     padding: 20px;
-    height: 100vh;
-    box-shadow: (2px 0px 5px rgba(255, 255, 255, 0.1));
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    box-shadow: 2px 0px 5px rgba(255, 255, 255, 0.1); /* Sombra (aunque está mal escrita, debería quitar los paréntesis) */
     margin: 0px;
-    border: 15px solid white;
+    border: 15px solid white; /* Borde blanco grueso */
     flex-direction: column;
     justify-content: space-between;
     display: flex;
-    border-radius: 10px;
+    border-radius: 10px; /* Bordes redondeados */
     box-sizing: border-box;
-    
 }
-.sidebar h2{
+
+/* Título dentro del sidebar */
+.sidebar h2 {
     text-align: center;
     font-size: 25px;
     margin-bottom: 30px;
 }
-.sidebar ul{
+
+/* Lista de opciones del menú */
+.sidebar ul {
     list-style: none;
-    flex-grow: 1;
+    flex-grow: 1; /* Que crezca para ocupar espacio */
     padding: 0;
     margin: 0;
 }
 
-.sidebar ul li{
+/* Cada elemento de la lista */
+.sidebar ul li {
     padding: 5px;
 }
 
-.sidebar ul li a{
+/* Estilos para los enlaces del menú */
+.sidebar ul li a {
     color: white;
     text-decoration: none;
     display: block;
     padding: 10px 15px;
     transition: background 0.3s;
-    border-radius: 8px;
+    border-radius: 8px; /* Bordes suaves */
 }
 
-.sidebar ul li a:hover{
-    background-color: rgb(0, 115, 230);
+/* Cuando el mouse pasa sobre un enlace */
+.sidebar ul li a:hover {
+    background-color: rgb(61, 61, 61); /* Fondo gris oscuro */
 }
 
-    .sidebar ul li a.active{
-        background-color: #1abc9c;
-        font-weight: bold;
+/* Enlace activo (página actual) */
+.sidebar ul li a.active {
+    background-color: #1abc9c; /* Verde agua */
+    font-weight: bold;
 }
 
-.sidebar ul li a i{
+/* Íconos dentro de cada opción del menú */
+.sidebar ul li a i {
     margin-right: 10px;
-    width: 20px;
+    width: 20px; /* Para que todos tengan el mismo ancho */
 }
 
+/* Enlace de cerrar sesión */
 .logout a {
     display: block;
     padding: 10px 15px;
-    color : white;
+    color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
     transition: background 0.3s;
-
 }
 
+/* Contenedor para la imagen del logo abajo del sidebar */
 .sidebar-footer {
     text-align: center;
-    margin-top: auto;
+    margin-top: auto; /* Empuja hacia abajo */
 }
 
+/* Imagen del logo */
 .sidebar-footer img {
     width: 170px;
     height: auto;
@@ -82,14 +95,17 @@ body {
     opacity: 0.9;
 }
 
+/* Hover para botón de cerrar sesión */
 .logout a:hover {
     background-color: rgb(0, 115, 230);
     color: white;
 }
+
+/* Estilos para la barra superior */
 .topbar {
-    position: fixed;
+    position: fixed; /* Se mantiene arriba al hacer scroll */
     top: 0;
-    left: 270px;
+    left: 270px; /* Deja espacio al sidebar */
     right: 17px;
     height: 60px;
     color: white;
@@ -97,20 +113,20 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
-    border: white solid 10px;
-    border-radius: 10px;
-    
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    z-index: 1000; /* Se mantiene sobre otros elementos */
+    border: white solid 10px; /* Borde blanco grueso */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
-
+/* Contenedor del contenido principal */
 .main-content {
-    margin-left: 250px;
-    padding-top: 70px; 
+    margin-left: 250px; /* Deja espacio para el sidebar */
+    padding-top: 70px;  /* Deja espacio para la topbar */
     padding: 20px;
 }
 
+/* Información del usuario en la topbar */
 .topbar .user-info {
     display: flex;
     align-items: center;
@@ -118,18 +134,21 @@ body {
     font-weight: bold;
 }
 
+/* Icono del usuario */
 .topbar .user-info i {
     font-size: 24px;
 }
 
+/* Título de la página en la topbar */
 .topbar .title {
     position: absolute;
-    left: 15%;
+    left: 15%; /* Centrado relativo */
     transform: translateX(-50%);
     font-size: 30px;
     margin: 0;
 }
 
+/* Botón de cerrar sesión en la topbar */
 .logout-btn {
     position: absolute;
     right: 20px;
@@ -143,7 +162,8 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Efecto hover del botón de cerrar sesión */
 .logout-btn:hover {
     background-color: white;
-    color: rgb(0, 115, 230);
+    color: rgb(0, 115, 230); /* Cambia color al pasar el mouse */
 }
