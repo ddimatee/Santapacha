@@ -43,18 +43,6 @@
         <div id="reportes" class="seccion" style="display:none;">Bienvenido al panel de reportes.</div>
         <div id="boletines" class="seccion" style="display:none;">Bienvenido al panel de boletines.</div>
     </div>
-
-    
-    <script>
-        function mostrarSeccion(id) {
-            const secciones = document.querySelectorAll('.seccion');
-            secciones.forEach(sec => sec.style.display = 'none');
-            const activa = document.getElementById(id);
-            if (activa) activa.style.display = 'block';
-        }
-
-        window.onload = () => mostrarSeccion('inicio');
-    </script>
 <script src="index.js" crossorigin="anonymous"></script>
 </body>
 </html>
