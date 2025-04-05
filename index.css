@@ -119,13 +119,6 @@ body {
     border-radius: 10px; /* Bordes redondeados */
 }
 
-/* Contenedor del contenido principal */
-.main-content {
-    margin-left: 250px; /* Deja espacio para el sidebar */
-    padding-top: 70px;  /* Deja espacio para la topbar */
-    padding: 20px;
-}
-
 /* Información del usuario en la topbar */
 .topbar .user-info {
     display: flex;
@@ -166,4 +159,29 @@ body {
 .logout-btn:hover {
     background-color: white;
     color: rgb(0, 115, 230); /* Cambia color al pasar el mouse */
+}
+
+.main-content {
+    margin-left: 270px;        /* espacio para el sidebar */
+    margin-top: 100px;         /* espacio para la topbar */
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: calc(100vh - 100px); /* para que ocupe el alto de la pantalla */
+    box-sizing: border-box;
+    margin-top: 60px;
+}
+
+.seccion {
+    background-color: white;
+    color: #333;
+    padding: 15px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    max-width: 700px;
+    font-size: 18px;
+    display: none;
+    animation: fadeIn 0.5s ease;
 }

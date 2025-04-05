@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calificaciones</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- SIDEBAR -->
     <div class="sidebar"> 
         <h2>¡Bienvenido, Administrador!</h2>
         <ul>
@@ -18,28 +18,43 @@
             <li><a href="#" onclick="mostrarSeccion('docentes')">Docentes</a></li>
             <li><a href="#" onclick="mostrarSeccion('reportes')">Reportes</a></li>
             <li><a href="#" onclick="mostrarSeccion('boletines')">Boletines académicos</a></li>
-        
         </ul>
         <div class="sidebar-footer">
             <img src="img/escudo.jpg" alt="escudo">
         </div>
-
-       
-            <div class="topbar">
-                <h1 class="title">Santa Pacha</h1>
-                <div class="user-info">
-                    <i class="fas fa-user-circle"></i>
-                    <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
-                </div>
-            </div>
-
-            <div class="main-content">
-                <div id="inicio" class="seccion">Bienvenido al panel principal.</div>
-                <div id="grados" class="seccion">Bienvenido al panel de grados.</div>
-                <div id="notas" class="seccion">Bienvenido al panel de notas.</div>
-                <div id="asignaturas" class="seccion">Bienvenido al panel de asignaturas.</div>
-                <div id="docentes" class="seccion">Bienvenido al panel de docentes.</div>
-                <div id="reportes" class="seccion">Bienvenido al panel de reportes.</div>
-                <div id="boletines" class="seccion">Bienvenido al panel de boletines.</div>
-            </div>
     </div>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <h1 class="title">Santa Pacha</h1>
+        <div class="user-info">
+            <i class="fas fa-user-circle"></i>
+            <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-content">
+        <div id="inicio" class="seccion">Bienvenido al panel principal.</div>
+        <div id="grados" class="seccion" style="display:none;">Bienvenido al panel de grados.</div>
+        <div id="notas" class="seccion" style="display:none;">Bienvenido al panel de notas.</div>
+        <div id="asignaturas" class="seccion" style="display:none;">Bienvenido al panel de asignaturas.</div>
+        <div id="docentes" class="seccion" style="display:none;">Bienvenido al panel de docentes.</div>
+        <div id="reportes" class="seccion" style="display:none;">Bienvenido al panel de reportes.</div>
+        <div id="boletines" class="seccion" style="display:none;">Bienvenido al panel de boletines.</div>
+    </div>
+
+    
+    <script>
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(sec => sec.style.display = 'none');
+            const activa = document.getElementById(id);
+            if (activa) activa.style.display = 'block';
+        }
+
+        window.onload = () => mostrarSeccion('inicio');
+    </script>
+<script src="index.js" crossorigin="anonymous"></script>
+</body>
+</html>
