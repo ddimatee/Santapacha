@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del Padre/Estudiante</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <div class="sidebar"> 
+    <h2>¡Bienvenido, padre/estudiante!</h2>
+    <ul>
+      <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+      <li><a href="#" onclick="mostrarSeccion('notas')">Ver calificaciones</a></li>
+      <li><a href="#" onclick="mostrarSeccion('comportamiento')">Ver comportamiento</a></li>
+      <li><a href="#" onclick="mostrarSeccion('boletines')">Boletines académicos</a></li>
+      <li><a href="#" onclick="mostrarSeccion('notificaciones')">Notificaciones</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <img src="img/escudo.jpg" alt="Escudo" width="150" height="150">
+
+    </div>
+  </div>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <h1 class="title">Santa Pacha</h1>
+    <div class="user-info">
+      <i class="fas fa-user-circle"></i>
+      <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+    </div>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="main-content">
+    <div id="inicio" class="seccion">Bienvenido al panel del padre/estudiante.</div>
+    <div id="notas" class="seccion" style="display:none;">Aquí se muestran las calificaciones del estudiante.</div>
+    <div id="comportamiento" class="seccion" style="display:none;">Registro de comportamiento del estudiante.</div>
+    <div id="boletines" class="seccion" style="display:none;">Boletines académicos descargables.</div>
+    <div id="notificaciones" class="seccion" style="display:none;">Notificaciones recientes del colegio.</div>
+  </div>
+
+  <script src="index.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
