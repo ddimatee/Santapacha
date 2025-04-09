@@ -15,13 +15,13 @@ body {
 /* Caja de login con fondo azul */
 #loginBox {
     background-color: #9dccff; /* Fondo azul */
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     color: white;
-    width: 300px;  /* Aquí puedes ajustar el ancho a lo que desees, ej: 300px, 400px, 50% */
-    height: 270px;  /* Ajusta el alto como prefieras, ej: 400px, o usa 'auto' si prefieres que se ajuste */
+    width: 280px;  /* Aquí puedes ajustar el ancho a lo que desees, ej: 300px, 400px, 50% */
+    height: 280px;  /* Ajusta el alto como prefieras, ej: 400px, o usa 'auto' si prefieres que se ajuste */
     margin-top: -150px; /* Para centrar verticalmente */
 }
 
@@ -39,13 +39,18 @@ h1 {
 #roles {
     text-align: center;
     color: #023E8A;
-    font-size: 13px;
+    font-size: 14px;
     margin-top:1px;
-    width: 300PX;
-    height: 30px;
+    width: 270PX;
+    height: 34px;
     border-radius: 6px;
     border: none;
     padding: 8px;
+}
+/* Estilo cuando el campo tiene el foco (cuando se hace clic en él) */
+#roles:focus {
+    border: 2px solid blue; /* Borde azul al hacer clic */
+    outline: none; /* Elimina el borde de enfoque predeterminado del navegador */
 }
 
 /* Estilo para los campos de texto */
@@ -54,11 +59,16 @@ h1 {
     color: black;
     font-size: 13px;
     margin-top:20px;
-    width: 300px;
-    height: 30px;
+    width: 270px;
+    height: 34px;
     border-radius: 6px;
     border: none;
     padding: 1px;
+}
+/* Estilo cuando el campo tiene el foco (cuando se hace clic en él) */
+#email:focus {
+    border: 2px solid blue; /* Borde azul al hacer clic */
+    outline: none; /* Elimina el borde de enfoque predeterminado del navegador */
 }
 
 #password {
@@ -66,19 +76,23 @@ h1 {
     color: black;
     font-size: 13px;
     margin-top:2px;
-    width: 300PX;
-    height: 30px;
+    width: 270PX;
+    height: 34px;
     border-radius: 6px;
     border: none;
     padding: 1px;
-
+}
+/* Estilo cuando el campo tiene el foco (cuando se hace clic en él) */
+#password:focus {
+    border: 2px solid blue; /* Borde azul al hacer clic */
+    outline: none; /* Elimina el borde de enfoque predeterminado del navegador */
 }
 /* Estilo para el botón de inicio de sesión */
 button {
     text-align: center;
     font-size: 14px;
-    margin-top: 15px;
-    width: 300PX;
+    margin-top: 13px;
+    width: 270PX;
     height: 30px;
     border-radius: 6px;
     border: none;
@@ -89,13 +103,13 @@ button {
 }
 
 button:hover {
-    background-color: #218838; /* Verde más oscuro al pasar el ratón */
+    background-color:blue; /* Verde más oscuro al pasar el ratón */
 }
 
 /* Estilo para el botón "Olvidaste tu contraseña" */
 #recuperarcontraseña button {
     font-size: 15px;
-    margin-top: 10px;
+    margin-top: 6px;
     width: auto;
     height: auto;
     background-color: transparent;
@@ -105,7 +119,7 @@ button:hover {
 }
 
 #recuperarcontraseña button:hover {
-    color: #f0f0f0;
+    color: blue;
     text-decoration: underline;
 }
 
