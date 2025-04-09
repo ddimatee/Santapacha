@@ -5,50 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santa Pacha</title>
     <link rel="stylesheet" href="index.css">
-       <script src="index.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
 
 <div id="principal">
-    <form id="loginForm">
+    <!-- Caja de login con fondo azul -->
+    <div id="loginBox">
+        <form id="loginForm">
 
-        <h1>BIENVENIDO</h1>
-        <img id="logo" src="Logo.jpg">
+            <h1>BIENVENIDO</h1>
 
-        <div>
-            <label for="rol" id="rol"></label>
-            <select id="roles" name="roles">
-                <option value="" disabled selected hidden>Rol</option> <!-- Opción predeterminada "Rol" -->
-                <option value="admin">Administrador</option>
-                <option value="docente">Docente</option>
-                <option value="Estudiante">Estudiante</option>
-                <option value="Padre">Padre</option>
-            </select>
+            <div>
+                <label for="rol" id="rol"></label>
+                <select id="roles" name="roles">
+                    <option value="" disabled selected hidden>Rol</option>
+                    <option value="admin">Administrador</option>
+                    <option value="docente">Docente</option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Padre">Padre</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required><br><br>
+            </div>
+
+            <label for="password"></label>
+            <input type="password" id="password" name="password" placeholder="Contraseña" required><br><br>
+
+            <button type="submit">Iniciar sesión</button><br><br>
+        </form>
+
+        <!-- Botón "¿Olvidaste tu contraseña?" fuera del formulario -->
+        <div id="recuperarcontraseña">
+            <button type="button" onclick="restablecercontraseña()">¿Olvidaste tu contraseña?</button>
         </div>
-            
-        <!-- Campo para el correo electrónico -->
-        <div>
-            <label for="email"></label>
-            <input type="email" id="email" name="email" placeholder="Correo electrónico" required><br><br>
+
+        <div id="contenedorrecuperarcontraseña" style="display: none;">
+            <h1>Recuperar contraseña</h1>
         </div>
-
-        <!-- Campo para la contraseña -->
-        <label for="password"></label>
-        <input type="password" id="password" name="password" placeholder="Contraseña" required><br><br>
-
-        <!-- Botón para enviar el formulario -->
-        <button type="submit">Iniciar sesión</button><br><br>
-    </form>
-
-    <!-- Botón "¿Olvidaste tu contraseña?" fuera del formulario, con type="button" -->
-    <div id="recuperarcontraseña">
-        <button type="button" onclick="restablecercontraseña()">¿Olvidaste tu contraseña?</button>
-    </div>
-
-    <!-- Contenedor para recuperación de contraseña -->
-    <div id="contenedorrecuperarcontraseña" style="display: none;">
-    <h1>Recuperar contraseña</h1>
- 
     </div>
 </div>
 

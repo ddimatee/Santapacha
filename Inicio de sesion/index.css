@@ -1,107 +1,117 @@
+/* Fondo de la página */
 body {
-    background-color: rgb(0, 115, 230);
-    color:white;
-    font-family: Arial; 
+    background-image: url(Photoroom-20250409_081906582.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-h1 {
+
+/* Caja de login con fondo azul */
+#loginBox {
+    background-color: #9dccff; /* Fondo azul */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    margin-top: 40px;
+    color: white;
+    width: 300px;  /* Aquí puedes ajustar el ancho a lo que desees, ej: 300px, 400px, 50% */
+    height: 270px;  /* Ajusta el alto como prefieras, ej: 400px, o usa 'auto' si prefieres que se ajuste */
+    margin-top: -150px; /* Para centrar verticalmente */
 }
 
- #logo {
-    
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    margin-top: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
- }
+h1 {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente del título */
+    font-size: 25px; /* Tamaño de la fuente */
+    text-align: center; /* Centrar el texto */
+    color: white; /* Color del texto */
+    margin-top: -9px; /* Ajustar el margen superior, puedes poner un valor negativo o positivo */
+    margin-bottom: 20px; /* Ajusta el margen inferior si lo necesitas */
+}
 
- #roles {
+
+/* Estilo para los select (roles) */
+#roles {
     text-align: center;
+    color: #023E8A;
     font-size: 13px;
-    margin-top: 60px;
-    width: 300px;
-    height: 40px;
+    margin-top:1px;
+    width: 300PX;
+    height: 30px;
     border-radius: 6px;
     border: none;
-    /* Agregamos el centrado del recuadro */
-    margin-left: auto;  /* Esto pone los márgenes izquierdo y derecho automáticos */
-    margin-right: auto;
-    display: block;     /* Hace que el elemento se comporte como un bloque, lo que ayuda con el centrado */
-    cursor: pointer;
+    padding: 8px;
 }
 
-
-#email {
-        text-align: center;  /* Centra el texto dentro del recuadro */
-        font-size: 13px;
-        margin-top: 45px;
-        width: 300px;
-        height: 40px;
-        border-radius: 6px;
-        border: none;
-        /* Agregamos el centrado del recuadro */
-        margin-left: auto;  /* Esto pone los márgenes izquierdo y derecho automáticos */
-        margin-right: auto;
-        display: block;     /* Hace que el elemento se comporte como un bloque, lo que ayuda con el centrado */
+/* Estilo para los campos de texto */
+#email{
+    text-align: center;
+    color: black;
+    font-size: 13px;
+    margin-top:20px;
+    width: 300px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    padding: 1px;
 }
-
 
 #password {
     text-align: center;
+    color: black;
     font-size: 13px;
-    margin-top: 10px;
-    width: 300px;
-    height: 40px;
+    margin-top:2px;
+    width: 300PX;
+    height: 30px;
     border-radius: 6px;
     border: none;
-    /* Agregamos el centrado del recuadro */
-    margin-left: auto;  /* Esto pone los márgenes izquierdo y derecho automáticos */
-    margin-right: auto;
-    display: block;     /* Hace que el elemento se comporte como un bloque, lo que ayuda con el centrado */
-}
+    padding: 1px;
 
+}
+/* Estilo para el botón de inicio de sesión */
 button {
     text-align: center;
     font-size: 14px;
-    margin-top: 8px;
-    width: 100px;
-    height: 25px;
+    margin-top: 15px;
+    width: 300PX;
+    height: 30px;
     border-radius: 6px;
     border: none;
-    /* Agregamos el centrado del recuadro */
-    margin-left: auto;  /* Esto pone los márgenes izquierdo y derecho automáticos */
-    margin-right: auto;
-    display: block;     /* Hace que el elemento se comporte como un bloque, lo que ayuda con el centrado */
-    transition: background-color 0.4s; /* Agrega una transición suave */
+    background-color: #3d82e9; /* Verde */
+    color: white;
     cursor: pointer;
+    transition: background-color 0.4s;
 }
 
 button:hover {
-    background-color: #5e6d8b; /* Cambia el color de fondo cuando el ratón está sobre el botón */
-    color: white/* Cambia el color del texto si lo deseas */
+    background-color: #218838; /* Verde más oscuro al pasar el ratón */
 }
 
+/* Estilo para el botón "Olvidaste tu contraseña" */
 #recuperarcontraseña button {
-
-    text-align: center;  /* Alinea el texto al centro dentro del botón */
-    margin: -10px auto;  /* Centra el botón horizontalmente y aplica un margen superior e inferior */
-    padding: 10px 20px;  /* Ajusta el relleno de acuerdo con tus necesidades */
-    font-size: 15px; 
-    width: auto;  /* El ancho se ajusta automáticamente al contenido */
-    height: auto;  /* La altura se ajusta automáticamente */
-    border: none;  /* Elimina los bordes */
-    border-radius: 5px;  /* Bordes redondeados, ajusta el valor si lo deseas */
-    background-color: transparent;  /* Color de fondo, puedes cambiarlo si lo necesitas */
-    color: white;  /* Color del texto */
-    white-space: nowrap;  /* Evita que el texto se divida en varias líneas */
-    display: block;  /* Hace que el botón sea un elemento de bloque */
+    font-size: 15px;
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    color: white;
+    border: none;
     cursor: pointer;
+}
+
+#recuperarcontraseña button:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+/* Para hacer que el formulario sea responsivo */
+@media (max-width: 600px) {
+    #loginBox {
+        width: 90%; /* La caja ocupará el 90% del ancho en dispositivos móviles */
+    }
 }
