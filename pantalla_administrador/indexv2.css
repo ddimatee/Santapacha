@@ -1,0 +1,45 @@
+body {
+    background-color: #b3e5fc;
+    font-family: Arial, sans-serif;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.santa-pacha {
+    font-size: 24px;
+    font-weight: bold;
+    color: #01579b;
+    background-color: #81d4fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.welcome-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0277bd;
+    
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #90caf9;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0277bd;
+}
