@@ -1,5 +1,5 @@
 body {
-    background-color: #b3e5fc;
+    background-color: #CAF0F8 !important;
     font-family: Arial, sans-serif;
 }
 
@@ -10,24 +10,30 @@ body {
     padding: 10px 20px;
 }
 
-.santa-pacha {
-    font-size: 24px;
-    font-weight: bold;
-    color: #01579b;
-    background-color: #81d4fa;
-    padding: 10px;
-    border-radius: 5px;
+
+/* Define la animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Comienza un poco más arriba */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
 }
 
 .welcome-message {
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bold;
     color: #0277bd;
-    
+   margin-top: -90px; /* Reduce este valor para subir el mensaje */
+   margin-right: 10px;
+    animation: fadeIn 1.3s ease-in-out; /* Aplica la animación */
 }
 
 .container {
-    margin-top: 50px;
+    margin-top: 10px; /* Aumenta este valor para bajar más el contenedor */    
 }
 
 .card {
@@ -43,3 +49,4 @@ body {
     font-weight: bold;
     color: #0277bd;
 }
+
