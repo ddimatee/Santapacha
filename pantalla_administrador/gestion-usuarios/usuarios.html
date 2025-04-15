@@ -27,6 +27,11 @@
                     <li class="list-group-item">
                         <a href="#" class="text-decoration-none" onclick="mostrarSeccion('ver-usuarios', 'Inicio → Gestión de Usuarios → Ver Usuarios')">Ver Usuarios</a>
                     </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-decoration-none" onclick="volverAlMenu()">
+                            <i class="fas fa-arrow-left"></i> Volver al Menú
+                        </a>
+                    </li>
                 </ul>
             </div>
 
@@ -84,7 +89,7 @@
                     <!-- Segunda pantalla: Formulario de modificación -->
                     <div id="formulario-modificar" style="display: none;">
                         <h5 class="mb-3">Modificar Usuario</h5>
-                        <form>
+                        <form onsubmit="guardarModificaciones(event)">
                             <div class="mb-3">
                                 <label for="nombre-modificar" class="form-label">Nombre y Apellido a modificar:</label>
                                 <input type="text" class="form-control" id="nombre-modificar" placeholder="Ingrese el nombre y apellido">
@@ -119,7 +124,7 @@
                 <!-- Borrar Usuario -->
                 <div class="content bg-light p-4 mt-3" id="borrar-usuario" style="display: none;">
                     <h5>Borrar Usuario</h5>
-                    <p>Aquí va el contenido para borrar usuario.</p>
+                    <ul class="list-group" id="borrar-usuarios-lista"></ul>
                 </div>
 
                 <!-- Ver Usuarios -->
