@@ -1,0 +1,84 @@
+body {
+    background-color: #CAF0F8;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100vh; /* Altura completa de la ventana */
+    padding-top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+}
+
+.sidebar h5 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #0277bd;
+    margin-top: -200px !important; /* Sube solo el título */
+    margin-bottom: 10px; /* Espacio entre el título y las opciones */
+}
+
+.list-group {
+    width: 100%; /* Asegura que las opciones ocupen todo el ancho */
+    text-align: center; /* Centra el texto dentro de las opciones */
+    margin-top: 200px; /* Agrega espacio encima de la lista si es necesario */
+}
+
+.list-group-item {
+    border: 1px solid #b4d6f1;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    background-color: #f4fafd; /* Más claro y simple */
+    box-shadow: none; /* Sin sombra */
+    transition: background 0.2s;
+}
+
+.list-group-item a {
+    color: #0277bd;
+    font-weight: normal; /* Sin negrita */
+    text-decoration: none;
+    font-size: 18px; /* Un poco más pequeño */
+}
+
+.list-group-item:hover {
+    background-color: #e3f2fd; /* Cambio sutil al pasar el mouse */
+    color: #0277bd;
+}
+
+.header {
+    text-align: center;
+    background-color: #438bbb !important; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 15px 0; /* Espaciado interno */
+    margin: 0; /* Elimina márgenes */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0; /* Extiende hacia el borde izquierdo */
+    right: 0; /* Extiende hacia el borde derecho */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 24px; /* Aumenta el tamaño del texto */
+    
+}
+.breadcrumb {
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #438bbb;
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 20px; /* Espaciado superior */
+    font-weight: bold; /* Texto en negrita */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+
+}
+
+.content {
+    min-height: 600px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 100px; /* Ajusta este valor según la altura de la barra */
+}

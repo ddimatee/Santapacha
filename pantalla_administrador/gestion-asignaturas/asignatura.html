@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Asignaturas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./asignatura.css">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Barra lateral -->
+            <nav class="col-md-3 bg-light sidebar">
+                <h5 class="mt-3">Gestión de Asignaturas</h5>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#modificar-asignaturas" class="text-decoration-none sidebar-link">Modificar Asignaturas</a></li>
+                    <li class="list-group-item"><a href="#crear-asignaturas" class="text-decoration-none sidebar-link">Crear Asignaturas</a></li>
+                    <li class="list-group-item"><a href="#borrar-asignaturas" class="text-decoration-none sidebar-link">Borrar Asignaturas</a></li>
+                    <li class="list-group-item"><a href="#asignaturas-asignadas" class="text-decoration-none sidebar-link">Asignaturas Asignadas</a></li>
+                    <li class="list-group-item"><a href="../indexv2.html" class="text-decoration-none"><i class="fas fa-arrow-left"></i> Volver al Menú</a></li>
+                </ul>
+            </nav>
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                <div class="header bg-primary text-white p-3">
+                    <h5>Administrador</h5>
+                </div>
+                <div class="breadcrumb mt-3" id="breadcrumb">
+                    Inicio → Gestión de Asignaturas
+                </div>
+
+                <!-- Modificar Asignaturas -->
+                <div class="content bg-light p-4 mt-3 d-none" id="modificar-asignaturas">
+                    <h5>Modificar Asignaturas</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="asignatura-modificar" class="form-label">Selecciona una Asignatura:</label>
+                            <select class="form-control" id="asignatura-modificar">
+                                <option value="1">Matemáticas</option>
+                                <option value="2">Ciencias</option>
+                                <option value="3">Inglés</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nuevo-nombre" class="form-label">Nuevo Nombre:</label>
+                            <input type="text" class="form-control" id="nuevo-nombre" placeholder="Ej: Física">
+                        </div>
+                        <button type="button" class="btn btn-success">Guardar Cambios</button>
+                    </form>
+                </div>
+
+                <!-- Crear Asignaturas -->
+                <div class="content bg-light p-4 mt-3 d-none" id="crear-asignaturas">
+                    <h5>Crear Asignaturas</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre-asignatura" class="form-label">Nombre de la Asignatura:</label>
+                            <input type="text" class="form-control" id="nombre-asignatura" placeholder="Ej: Historia">
+                        </div>
+                        <button type="button" class="btn btn-success">Crear Asignatura</button>
+                    </form>
+                </div>
+
+                <!-- Borrar Asignaturas -->
+                <div class="content bg-light p-4 mt-3 d-none" id="borrar-asignaturas">
+                    <h5>Borrar Asignaturas</h5>
+                    <ul class="list-group" id="borrar-asignaturas-lista">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Matemáticas
+                            <button class="btn btn-danger btn-sm">Borrar</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Ciencias
+                            <button class="btn btn-danger btn-sm">Borrar</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Inglés
+                            <button class="btn btn-danger btn-sm">Borrar</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Asignaturas Asignadas -->
+                <div class="content bg-light p-4 mt-3 d-none" id="asignaturas-asignadas">
+                    <h5>Asignaturas Asignadas</h5>
+                    <ul class="list-group" id="asignaturas-asignadas-lista">
+                        <li class="list-group-item">Matemáticas - Profesor: Laura Torres</li>
+                        <li class="list-group-item">Ciencias - Profesor: Pedro Ramírez</li>
+                        <li class="list-group-item">Inglés - Profesor: Sofía Herrera</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.content').forEach(section => {
+            section.classList.add('d-none');
+        });
+
+        // Breadcrumbs por sección
+        const breadcrumbMap = {
+            'modificar-asignaturas': 'Inicio → Gestión de Asignaturas → Modificar Asignaturas',
+            'crear-asignaturas': 'Inicio → Gestión de Asignaturas → Crear Asignaturas',
+            'borrar-asignaturas': 'Inicio → Gestión de Asignaturas → Borrar Asignaturas',
+            'asignaturas-asignadas': 'Inicio → Gestión de Asignaturas → Asignaturas Asignadas'
+        };
+
+        document.querySelectorAll('.sidebar-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href').replace('#', '');
+                if (!targetId) return;
+                e.preventDefault();
+                document.querySelectorAll('.content').forEach(section => {
+                    if (section.id === targetId) {
+                        section.classList.remove('d-none');
+                    } else {
+                        section.classList.add('d-none');
+                    }
+                });
+               
+                const breadcrumb = document.getElementById('breadcrumb');
+                if (breadcrumbMap[targetId]) {
+                    breadcrumb.textContent = breadcrumbMap[targetId];
+                } else {
+                    breadcrumb.textContent = 'Inicio → Gestión de Asignaturas';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
