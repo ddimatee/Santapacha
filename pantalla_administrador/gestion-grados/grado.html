@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./grado.css">
+    <title>Gestión de Grados</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Barra lateral -->
+            <nav class="col-md-3 bg-light sidebar">
+                <h5 class="mt-3">Gestión de Grados</h5>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#crear-grado" class="text-decoration-none sidebar-link">Crear Grado</a></li>
+                    <li class="list-group-item"><a href="#modificar-grado" class="text-decoration-none sidebar-link">Modificar Grado</a></li>
+                    <li class="list-group-item"><a href="#borrar-grado" class="text-decoration-none sidebar-link">Borrar Grado</a></li>
+                    <li class="list-group-item"><a href="#ver-grados" class="text-decoration-none sidebar-link">Ver Grados</a></li>
+                    <li class="list-group-item"><a href="#asignar-asignaturas" class="text-decoration-none sidebar-link">Asignar Asignaturas</a></li>
+                    <li class="list-group-item"><a href="../indexv2.html" class="text-decoration-none"><i class="fas fa-arrow-left"></i> Volver al Menú</a></li>
+                </ul>
+            </nav>
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                <div class="header bg-primary text-white p-3">
+                    <h5>Administrador</h5>
+                </div>
+                <div class="breadcrumb mt-3" id="breadcrumb">
+                    Inicio → Gestión de Grados
+                </div>
+
+                <!-- Crear Grado -->
+                <div class="content bg-light p-4 mt-3 d-none" id="crear-grado">
+                    <h5>Crear Grado</h5>
+                    <form>
+                        <div class="mb-4">
+                            <label for="nombre" class="form-label">Nombre del grado:</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del grado">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Docente/s asignado/s:</label>
+                            <div class="docentes-list p-3">
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="docente1" name="docentes">
+                                    <label class="form-check-label" for="docente1">Carlos Perez - CC.0000000</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="docente2" name="docentes">
+                                    <label class="form-check-label" for="docente2">Maria Rodriguez - CC.1111111</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="docente3" name="docentes">
+                                    <label class="form-check-label" for="docente3">Juan Gómez - CC.2222222</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="docente4" name="docentes">
+                                    <label class="form-check-label" for="docente4">Ana Martinez - CC.3333333</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Asignatura/s para asignar:</label>
+                            <div class="asignaturas-list p-3">
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="asignatura1" name="asignaturas">
+                                    <label class="form-check-label" for="asignatura1">Matemáticas</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="asignatura2" name="asignaturas">
+                                    <label class="form-check-label" for="asignatura2">Español</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="asignatura3" name="asignaturas">
+                                    <label class="form-check-label" for="asignatura3">Inglés</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="asignatura4" name="asignaturas">
+                                    <label class="form-check-label" for="asignatura4">Química</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-success">Crear Grado</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modificar Grado -->
+                <div class="content bg-light p-4 mt-3 d-none" id="modificar-grado">
+                    <h5>Modificar Grado</h5>
+                    <div class="list-group mb-4" id="lista-grados-modificar">
+                        <a href="#" class="list-group-item list-group-item-action p-3">
+                            6° - Matemáticas, Español - Carlos Perez
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action p-3">
+                            7° - Matemáticas, Español - Carlos Perez
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action p-3">
+                            8° - Matemáticas, Español - Carlos Perez
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action p-3">
+                            9° - Matemáticas, Español - Carlos Perez
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action p-3">
+                            10° - Matemáticas, Español - Carlos Perez
+                        </a>
+                    </div>
+                    <form class="border-top pt-4">
+                        <div class="mb-4">
+                            <label for="nombre-modificar" class="form-label">Nombre del grado:</label>
+                            <input type="text" class="form-control" id="nombre-modificar" placeholder="Ingrese el nombre del grado">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Docente/s asignado/s:</label>
+                            <div class="docentes-list p-3">
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="docente1-mod" name="docentes">
+                                    <label class="form-check-label" for="docente1-mod">Carlos Perez - CC.0000000</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="docente2-mod" name="docentes">
+                                    <label class="form-check-label" for="docente2-mod">Maria Rodriguez - CC.1111111</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="docente3-mod" name="docentes">
+                                    <label class="form-check-label" for="docente3-mod">Juan Gómez - CC.2222222</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="docente4-mod" name="docentes">
+                                    <label class="form-check-label" for="docente4-mod">Ana Martinez - CC.3333333</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Asignatura/s para asignar:</label>
+                            <div class="asignaturas-list p-3">
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="asignatura1-mod" name="asignaturas">
+                                    <label class="form-check-label" for="asignatura1-mod">Matemáticas</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="asignatura2-mod" name="asignaturas">
+                                    <label class="form-check-label" for="asignatura2-mod">Español</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="asignatura3-mod" name="asignaturas">
+                                    <label class="form-check-label" for="asignatura3-mod">Inglés</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="asignatura4-mod" name="asignaturas">
+                                    <label class="form-check-label" for="asignatura4-mod">Química</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-secondary me-2">Cancelar</button>
+                            <button type="button" class="btn btn-success">Guardar Cambios</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Borrar Grado -->
+                <div class="content bg-light p-4 mt-3 d-none" id="borrar-grado">
+                    <h5>Borrar Grado</h5>
+                    <ul class="list-group" id="borrar-grados-lista">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            6° - Matemáticas, Español - Carlos Perez
+                            <button class="delete-btn">Borrar</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            7° - Matemáticas, Inglés - Maria Rodriguez
+                            <button class="delete-btn">Borrar</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            8° - Química, Español - Juan Gómez
+                            <button class="delete-btn">Borrar</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            9° - Matemáticas, Química - Ana Martinez
+                            <button class="delete-btn">Borrar</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ver Grados -->
+                <div class="content bg-light p-4 mt-3 d-none" id="ver-grados">
+                    <h5>Ver Grados</h5>
+                    <ul class="list-group" id="ver-grados-lista">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            5° - Ciencias, Matemáticas - Laura Torres
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            6° - Sociales, Inglés - Pedro Ramírez
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            7° - Matemáticas, Tecnología - Sofía Herrera
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            8° - Español, Química - Andrés López
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Asignar Asignaturas -->
+                <div class="content bg-light p-4 mt-3 d-none" id="asignar-asignaturas">
+                    <h5>Asignar Asignaturas</h5>
+                    <form>
+                        <div class="mb-3">
+                            <select class="form-control" id="grado-asignatura">
+                                <option value="">Selecciona un grado</option>
+                                <option value="5">5° - Laura Torres</option>
+                                <option value="6">6° - Pedro Ramírez</option>
+                                <option value="7">7° - Sofía Herrera</option>
+                                <option value="8">8° - Andrés López</option>
+                                <option value="9">9° - Ana Martinez</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre-asignatura" class="form-label">Nombre de la Asignatura:</label>
+                            <input type="text" class="form-control" id="nombre-asignatura" placeholder="Ej: Matemáticas">
+                        </div>
+                        <button type="button" class="btn btn-success">Asignar Asignatura</button>
+                    </form>
+                    <div id="lista-asignaturas" class="mt-4">
+                        <!-- Aquí podrías mostrar asignaturas asignadas de ejemplo si quieres -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+       
+        document.querySelectorAll('.content').forEach(section => {
+            section.classList.add('d-none');
+        });
+
+        // Breadcrumbs por sección
+        const breadcrumbMap = {
+            'crear-grado': 'Inicio → Gestión de Grados → Crear Grado',
+            'modificar-grado': 'Inicio → Gestión de Grados → Modificar Grado',
+            'borrar-grado': 'Inicio → Gestión de Grados → Borrar Grado',
+            'ver-grados': 'Inicio → Gestión de Grados → Ver Grados',
+            'asignar-asignaturas': 'Inicio → Gestión de Grados → Asignar Asignaturas'
+        };
+
+        document.querySelectorAll('.sidebar-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href').replace('#', '');
+                if (!targetId) return;
+                e.preventDefault();
+                document.querySelectorAll('.content').forEach(section => {
+                    if (section.id === targetId) {
+                        section.classList.remove('d-none');
+                    } else {
+                        section.classList.add('d-none');
+                    }
+                });
+               
+                const breadcrumb = document.getElementById('breadcrumb');
+                if (breadcrumbMap[targetId]) {
+                    breadcrumb.textContent = breadcrumbMap[targetId];
+                } else {
+                    breadcrumb.textContent = 'Inicio → Gestión de Grados';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

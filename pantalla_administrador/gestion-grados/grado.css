@@ -1,0 +1,147 @@
+body {
+    background-color: #CAF0F8;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100vh; /* Altura completa de la ventana */
+    padding-top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+}
+
+.sidebar h5 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #0277bd;
+    margin-top: -200px !important; /* Sube solo el título */
+    margin-bottom: 10px; /* Espacio entre el título y las opciones */
+}
+
+.list-group {
+    width: 100%; /* Asegura que las opciones ocupen todo el ancho */
+    text-align: center; /* Centra el texto dentro de las opciones */
+    margin-top: 200px; /* Agrega espacio encima de la lista si es necesario */
+}
+
+.list-group-item {
+    border: none;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #b4d6f1; /* Color de fondo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item a {
+    color: #0277bd;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.list-group-item:hover {
+    background-color: #90CAF9;
+    color: white;
+}
+
+.header {
+    text-align: center;
+    background-color: #438bbb !important; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 15px 0; /* Espaciado interno */
+    margin: 0; /* Elimina márgenes */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0; /* Extiende hacia el borde izquierdo */
+    right: 0; /* Extiende hacia el borde derecho */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 24px; /* Aumenta el tamaño del texto */
+    
+}
+.breadcrumb {
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #438bbb;
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 20px; /* Espaciado superior */
+    font-weight: bold; /* Texto en negrita */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+
+}
+
+
+/* Estilos para Modificar Grado */
+#modificar-grado .grados-list {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#modificar-grado .grado-item {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #495057;
+    font-weight: 500;
+}
+
+/* Mejorar visibilidad de la lista de grados en Modificar Grado */
+#modificar-grado .list-group {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 0 !important;
+}
+
+/* Subir todo el contenido de modificar-grado */
+#modificar-grado {
+    margin-top: 10px !important; /* Opcional: reduce el margen superior */
+}
+
+/* Mejorar el aspecto de los items seleccionables */
+#modificar-grado .list-group-item-action {
+    background-color: #ffffff;
+    border: 1px solid #0277bd;
+    color: #0277bd;
+    font-weight: bold;
+    margin-bottom: 8px;
+    border-radius: 6px !important;
+    transition: all 0.3s ease;
+}
+
+
+#modificar-grado .list-group-item-action.active,
+#modificar-grado .list-group-item-action:active {
+    background-color: #0277bd !important;
+    color: #fff !important;
+    border-color: #0277bd !important;
+}
+
+
+.docentes-list,
+.asignaturas-list {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+#borrar-grados-lista {
+    margin-top: 10px !important;
+}
+
+#ver-grados-lista {
+    margin-top: 10px !important;
+}
