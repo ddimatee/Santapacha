@@ -149,8 +149,6 @@ function guardarModificaciones(event) {
     }
 }
 
-// ...existing code...
-
 // Función para actualizar la lista de usuarios en la sección borrar
 function actualizarListaBorrarUsuarios() {
     const listaBorrarUsuarios = document.getElementById('borrar-usuarios-lista');
@@ -193,7 +191,5 @@ function borrarUsuario(index) {
 
 // Función para volver al menú principal
 function volverAlMenu() {
-    if (confirm('¿Está seguro que desea volver al menú principal?')) {
-        window.location.href = '../indexv2.html'; // Ajusta esta ruta según tu estructura de archivos
+        window.location.href = '../indexv2.html';
     }
-}

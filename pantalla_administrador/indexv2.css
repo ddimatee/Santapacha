@@ -27,13 +27,13 @@ body {
     font-size: 30px;
     font-weight: bold;
     color: #0277bd;
-   margin-top: -90px; /* Reduce este valor para subir el mensaje */
+   margin-top: -90px;
    margin-right: 10px;
     animation: fadeIn 1.3s ease-in-out; /* Aplica la animación */
 }
 
 .container {
-    margin-top: 10px; /* Aumenta este valor para bajar más el contenedor */    
+    margin-top: 10px;   
 }
 
 .card {
