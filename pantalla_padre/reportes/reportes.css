@@ -1,103 +1,52 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #d6f3ff;
-    margin: 0;
-    padding: 20px;
+  background-color: #CAF0F8 !important;
+  font-family: Arial, sans-serif;
+}
+
+.welcome-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+
+/* Define la animación */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px); /* Comienza un poco más arriba */
   }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  to {
+      opacity: 1;
+      transform: translateY(0); /* Termina en su posición original */
   }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .logo-container img {
-    height: 60px;
-  }
-  
-  .logo-text {
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.2;
-  }
-  
-  h1 {
-    color: #0066cc;
-    text-align: right;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-  }
-  
-  .card {
-    background-color: white;
-    border: 2px solid #00aaff;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s;
-    cursor: pointer;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    font-weight: bold;
-    color: #003366;
-  }
-  
-  button {
-    background-color: #00aaff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #0088cc;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  table, th, td {
-    border: 1px solid #00aaff;
-  }
-  
-  th, td {
-    padding: 10px;
-    text-align: center;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #0066cc;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
+}
+
+.welcome-message {
+  font-size: 30px;
+  font-weight: bold;
+  color: #0277bd;
+ margin-top: -90px;
+ margin-right: 10px;
+  animation: fadeIn 1.3s ease-in-out; /* Aplica la animación */
+}
+
+.container {
+  margin-top: 10px;   
+}
+
+.card {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #90caf9;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0277bd;
+}
+
