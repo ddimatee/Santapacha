@@ -2,47 +2,48 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel del Padre/Estudiante</title>
+  <title>Inicio - Padre de Familia</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- SIDEBAR -->
-  <div class="sidebar"> 
-    <h2>¡Bienvenido, padre/estudiante!</h2>
-    <ul>
-      <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
-      <li><a href="#" onclick="mostrarSeccion('notas')">Ver calificaciones</a></li>
-      <li><a href="#" onclick="mostrarSeccion('comportamiento')">Ver comportamiento</a></li>
-      <li><a href="#" onclick="mostrarSeccion('boletines')">Boletines académicos</a></li>
-      <li><a href="#" onclick="mostrarSeccion('notificaciones')">Notificaciones</a></li>
-    </ul>
-    <div class="sidebar-footer">
-      <img src="img/escudo.jpg" alt="Escudo" width="150" height="150">
 
+<header>
+  <div class="logo-container">
+    <img src="img/escudo-menu.png" alt="Escudo">
+    <div class="logo-text">
+      COLEGIO <br>
+      SANTA PACHA
     </div>
   </div>
+  <h1>¡BIENVENIDO, PADRE DE FAMILIA!</h1>
+</header>
 
-  <!-- TOPBAR -->
-  <div class="topbar">
-    <h1 class="title">Santa Pacha</h1>
-    <div class="user-info">
-      <i class="fas fa-user-circle"></i>
-      <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+<section class="grid-container">
+  <a href="reportes/reportes.html">
+    <div class="card">
+      <img src="img/reportes.png" alt="Ver Reportes Académicos">
+      <p>Ver Reportes Académicos</p>
     </div>
-  </div>
+  </a>
+  
+  <a href="notas/notas.html">
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/error--v1.png" alt="Ver Notas">
+      <p>Ver Notas</p>
+    </div>
+  </a>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <div class="main-content">
-    <div id="inicio" class="seccion">Bienvenido al panel del padre/estudiante.</div>
-    <div id="notas" class="seccion" style="display:none;">Aquí se muestran las calificaciones del estudiante.</div>
-    <div id="comportamiento" class="seccion" style="display:none;">Registro de comportamiento del estudiante.</div>
-    <div id="boletines" class="seccion" style="display:none;">Boletines académicos descargables.</div>
-    <div id="notificaciones" class="seccion" style="display:none;">Notificaciones recientes del colegio.</div>
-  </div>
+  <a href="notificaciones/notificaciones.html">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/000000/bell.png" alt="Notificaciones">
+      <p>Notificaciones</p>
+    </div>
+  </a>
 
-  <script src="index.js" crossorigin="anonymous"></script>
+
+</section>
+
+<script src="index.js" defer></script>
+
 </body>
 </html>
-
-

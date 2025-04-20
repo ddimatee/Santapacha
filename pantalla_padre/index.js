@@ -1,84 +1,46 @@
-function mostrarSeccion(id) {
-    const secciones = document.querySelectorAll('.seccion');
-    secciones.forEach(sec => sec.style.display = 'none');
-  
-    const activa = document.getElementById(id);
-    if (activa) activa.style.display = 'block';
-  }
-  
-  // Mostrar sección 'inicio' al cargar
-  window.onload = () => mostrarSeccion('inicio');
-  
-  function mostrarSeccion(id) {
-    const secciones = document.querySelectorAll('.seccion');
-    secciones.forEach(sec => {
-        sec.style.display = 'none';
-        sec.classList.remove('fade');
-    });
-  
-    const activa = document.getElementById(id);
-    if (activa) {
-        activa.style.display = 'block';
-        setTimeout(() => activa.classList.add('fade'), 10);
+document.addEventListener('DOMContentLoaded', () => {
+  // Sección de tarjetas
+  const cards = document.querySelectorAll('.card');
+  const contenidoReportes = document.getElementById('contenido-reportes');
+  const contenidoNotas = document.getElementById('contenido-notas');
+  const contenidoNotificaciones = document.getElementById('contenido-notificaciones');
+
+  // Función para mostrar secciones
+  function mostrarSeccion(seccion) {
+    contenidoReportes.style.display = 'none';
+    contenidoNotas.style.display = 'none';
+    contenidoNotificaciones.style.display = 'none';
+
+    if (seccion === 'reportes-academicos') {
+      contenidoReportes.style.display = 'block';
+    } else if (seccion === 'ver-notas') {
+      contenidoNotas.style.display = 'block';
+    } else if (seccion === 'notificaciones') {
+      contenidoNotificaciones.style.display = 'block';
     }
-  
-    // Opcional: activar clase "active" en el menú
-    const enlaces = document.querySelectorAll('.sidebar ul li a');
-    enlaces.forEach(link => link.classList.remove('active'));
-  
-    const linkActivo = document.querySelector(`a[onclick*="${id}"]`);
-    if (linkActivo) linkActivo.classList.add('active');
   }
-  
-  // Mostrar por defecto
-  window.onload = () => mostrarSeccion('inicio');
-  
-  // Mostrar/ocultar submenú
-  function toggleSubmenu(id) {
-    const submenu = document.getElementById(id);
-    submenu.classList.toggle('visible');
-  }
-  
-  function mostrarSeccion(id) {
-    const secciones = document.querySelectorAll('.seccion');
-    secciones.forEach(sec => sec.style.display = 'none');
-  
-    const activa = document.getElementById(id);
-    if (activa) activa.style.display = 'block';
-  }
-  
-  // Mostrar sección 'inicio' al cargar
-  window.onload = () => mostrarSeccion('inicio');
-  
-  function mostrarSeccion(id) {
-    const secciones = document.querySelectorAll('.seccion');
-    secciones.forEach(sec => {
-        sec.style.display = 'none';
-        sec.classList.remove('fade');
+
+  // Agregar eventos a cada tarjeta para mostrar la sección correspondiente
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      if (card.id === 'reportes-academicos') {
+        mostrarSeccion('reportes-academicos');
+      } else if (card.id === 'ver-notas') {
+        mostrarSeccion('ver-notas');
+      } else if (card.id === 'notificaciones') {
+        mostrarSeccion('notificaciones');
+      } else {
+        alert(`Redirigiendo a: ${card.innerText}`);
+      }
     });
-  
-    const activa = document.getElementById(id);
-    if (activa) {
-        activa.style.display = 'block';
-        setTimeout(() => activa.classList.add('fade'), 10);
-    }
-  
-    // Opcional: activar clase "active" en el menú
-    const enlaces = document.querySelectorAll('.sidebar ul li a');
-    enlaces.forEach(link => link.classList.remove('active'));
-  
-    const linkActivo = document.querySelector(`a[onclick*="${id}"]`);
-    if (linkActivo) linkActivo.classList.add('active');
-  }
-  
-  // Mostrar por defecto
-  window.onload = () => mostrarSeccion('inicio');
-  
-  // Mostrar/ocultar submenú
-  function toggleSubmenu(id) {
-    const submenu = document.getElementById(id);
-    submenu.classList.toggle('visible');
-  }
-  
-  
-  
+  });
+
+  // Al hacer clic en los botones de descarga
+  const descargarBtns = document.querySelectorAll('.descargar-btn');
+  descargarBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert('Descargando reporte en formato PDF/Excel...');
+      // Aquí podrías integrar una funcionalidad real para descargar
+    });
+  });
+});
