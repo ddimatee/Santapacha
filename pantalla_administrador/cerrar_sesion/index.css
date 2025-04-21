@@ -1,0 +1,131 @@
+/* Fondo de la página */
+body {
+    background-image: url(Photoroom-20250409_081906582.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja de login con fondo azul */
+#loginBox {
+    background-color: #9dccff; /* Fondo azul */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    width: 280px;  /* Aquí puedes ajustar el ancho a lo que desees, ej: 300px, 400px, 50% */
+    height: 280px;  /* Ajusta el alto como prefieras, ej: 400px, o usa 'auto' si prefieres que se ajuste */
+    margin-top: -150px; /* Para centrar verticalmente */
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente del título */
+    font-size: 25px; /* Tamaño de la fuente */
+    text-align: center; /* Centrar el texto */
+    color: white; /* Color del texto */
+    margin-top: -9px; /* Ajustar el margen superior, puedes poner un valor negativo o positivo */
+    margin-bottom: 20px; /* Ajusta el margen inferior si lo necesitas */
+}
+
+
+/* Estilo para los select (roles) */
+#roles {
+    text-align: center;
+    color: #023E8A;
+    font-size: 14px;
+    margin-top:1px;
+    width: 270PX;
+    height: 34px;
+    border-radius: 6px;
+    border: none;
+    padding: 8px;
+}
+/* Estilo cuando el campo tiene el foco (cuando se hace clic en él) */
+#roles:focus {
+    border: 2px solid blue; /* Borde azul al hacer clic */
+    outline: none; /* Elimina el borde de enfoque predeterminado del navegador */
+}
+
+/* Estilo para los campos de texto */
+#email{
+    text-align: center;
+    color: black;
+    font-size: 13px;
+    margin-top:20px;
+    width: 270px;
+    height: 34px;
+    border-radius: 6px;
+    border: none;
+    padding: 1px;
+}
+/* Estilo cuando el campo tiene el foco (cuando se hace clic en él) */
+#email:focus {
+    border: 2px solid blue; /* Borde azul al hacer clic */
+    outline: none; /* Elimina el borde de enfoque predeterminado del navegador */
+}
+
+#password {
+    text-align: center;
+    color: black;
+    font-size: 13px;
+    margin-top:2px;
+    width: 270PX;
+    height: 34px;
+    border-radius: 6px;
+    border: none;
+    padding: 1px;
+}
+/* Estilo cuando el campo tiene el foco (cuando se hace clic en él) */
+#password:focus {
+    border: 2px solid blue; /* Borde azul al hacer clic */
+    outline: none; /* Elimina el borde de enfoque predeterminado del navegador */
+}
+/* Estilo para el botón de inicio de sesión */
+button {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 13px;
+    width: 270PX;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    background-color: #3d82e9; /* Verde */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+button:hover {
+    background-color:blue; /* Verde más oscuro al pasar el ratón */
+}
+
+/* Estilo para el botón "Olvidaste tu contraseña" */
+#recuperarcontraseña button {
+    font-size: 15px;
+    margin-top: 6px;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#recuperarcontraseña button:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Para hacer que el formulario sea responsivo */
+@media (max-width: 600px) {
+    #loginBox {
+        width: 90%; /* La caja ocupará el 90% del ancho en dispositivos móviles */
+    }
+}
