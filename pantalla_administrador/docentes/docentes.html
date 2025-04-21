@@ -91,7 +91,9 @@
     </div>
     
     <script>
+    // Inicializacion cuando el DOM se carga completamente
     window.addEventListener('DOMContentLoaded', () => {
+        // Oculta todas las secciones de contenido al inicio
         document.querySelectorAll('.content').forEach(section => {
             section.classList.add('d-none');
         });
@@ -103,11 +105,15 @@
             'ver-docentes': 'Inicio → Docentes → Ver Docentes'
         };
 
+        // Manejo de eventos para los enlaces de la barra lateral
         document.querySelectorAll('.sidebar-link').forEach(link => {
             link.addEventListener('click', function(e) {
+                // Obtiene el ID del contenido a mostrar
                 const targetId = this.getAttribute('href').replace('#', '');
                 if (!targetId) return;
                 e.preventDefault();
+
+                // Muestra/oculta las secciones correspondientes
                 document.querySelectorAll('.content').forEach(section => {
                     if (section.id === targetId) {
                         section.classList.remove('d-none');
@@ -116,6 +122,7 @@
                     }
                 });
                
+                // Actualiza el breadcrumb
                 const breadcrumb = document.getElementById('breadcrumb');
                 if (breadcrumbMap[targetId]) {
                     breadcrumb.textContent = breadcrumbMap[targetId];

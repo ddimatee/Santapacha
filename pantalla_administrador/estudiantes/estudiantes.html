@@ -63,40 +63,55 @@
     </div>
     
     <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.content').forEach(section => {
-            section.classList.add('d-none');
-        });
-
-        // Breadcrumbs por sección
-        const breadcrumbMap = {
-            'ver-estudiantes': 'Inicio → Estudiantes → Ver Estudiantes',
-            'ver-padre-asignado': 'Inicio → Estudiantes → Ver Padre Asignado',
-            'grado-por-estudiante': 'Inicio → Estudiantes → Grado por Estudiante'
-        };
-
-        document.querySelectorAll('.sidebar-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href').replace('#', '');
-                if (!targetId) return;
-                e.preventDefault();
-                document.querySelectorAll('.content').forEach(section => {
-                    if (section.id === targetId) {
-                        section.classList.remove('d-none');
+        // Espera a que el DOM esté completamente cargado antes de ejecutar el código
+        window.addEventListener('DOMContentLoaded', () => {
+            // Oculta todas las secciones de contenido al inicio de la página
+            document.querySelectorAll('.content').forEach(section => {
+                section.classList.add('d-none');
+            });
+    
+            // Define el mapa de rutas para el sistema de navegación (breadcrumbs)
+            // Cada clave corresponde a un ID de sección y su valor es la ruta completa
+            const breadcrumbMap = {
+                'ver-estudiantes': 'Inicio → Estudiantes → Ver Estudiantes',
+                'ver-padre-asignado': 'Inicio → Estudiantes → Ver Padre Asignado',
+                'grado-por-estudiante': 'Inicio → Estudiantes → Grado por Estudiante'
+            };
+    
+            // Agrega eventos click a todos los enlaces de la barra lateral
+            document.querySelectorAll('.sidebar-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Obtiene el ID del contenido a mostrar (elimina el # del href)
+                    const targetId = this.getAttribute('href').replace('#', '');
+                    
+                    // Si no hay ID objetivo, termina la función
+                    if (!targetId) return;
+                    
+                    // Previene el comportamiento predeterminado del enlace
+                    e.preventDefault();
+    
+                    // Recorre todas las secciones de contenido
+                    document.querySelectorAll('.content').forEach(section => {
+                        // Muestra la sección seleccionada y oculta las demás
+                        if (section.id === targetId) {
+                            section.classList.remove('d-none');  // Muestra la sección
+                        } else {
+                            section.classList.add('d-none');     // Oculta las otras secciones
+                        }
+                    });
+                   
+                    // Actualiza el texto del breadcrumb según la sección actual
+                    const breadcrumb = document.getElementById('breadcrumb');
+                    if (breadcrumbMap[targetId]) {
+                        // Si existe una ruta en el mapa, la muestra
+                        breadcrumb.textContent = breadcrumbMap[targetId];
                     } else {
-                        section.classList.add('d-none');
+                        // Si no existe, muestra la ruta por defecto
+                        breadcrumb.textContent = 'Inicio → Estudiantes';
                     }
                 });
-               
-                const breadcrumb = document.getElementById('breadcrumb');
-                if (breadcrumbMap[targetId]) {
-                    breadcrumb.textContent = breadcrumbMap[targetId];
-                } else {
-                    breadcrumb.textContent = 'Inicio → Estudiantes';
-                }
             });
         });
-    });
     </script>
 </body>
 </html>
