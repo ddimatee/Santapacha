@@ -1,103 +1,35 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #d6f3ff;
-    margin: 0;
-    padding: 20px;
+    background-color: #d4f3fb; /* fondo azul suave */
   }
   
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #4693c8; /* azul de encabezado como el de gestión de usuarios */
   }
   
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .logo-container img {
-    height: 60px;
-  }
-  
-  .logo-text {
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.2;
-  }
-  
-  h1 {
-    color: #0066cc;
-    text-align: right;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-  }
-  
-  .card {
-    background-color: white;
-    border: 2px solid #00aaff;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s;
-    cursor: pointer;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    font-weight: bold;
-    color: #003366;
-  }
-  
-  button {
-    background-color: #00aaff;
+  header h1 {
     color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
   }
   
-  button:hover {
-    background-color: #0088cc;
+  main h2 {
+    color: #137ac6; /* azul más fuerte para subtítulos */
   }
   
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  .custom-card {
+    background-color: white;
+    border: 2px solid #137ac6; /* borde azul como en los botones del panel */
+    transition: transform 0.2s ease-in-out;
   }
   
-  table, th, td {
-    border: 1px solid #00aaff;
+  .custom-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(19, 122, 198, 0.2);
   }
   
-  th, td {
-    padding: 10px;
-    text-align: center;
+  footer {
+    background-color: #d4f3fb;
   }
   
-  a {
-    text-decoration: none;
-    color: #0066cc;
-  }
-  
-  a:hover {
-    text-decoration: underline;
+  footer p {
+    color: #137ac6;
   }
   

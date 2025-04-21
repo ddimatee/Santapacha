@@ -1,52 +1,35 @@
 body {
-  background-color: #CAF0F8 !important;
-  font-family: Arial, sans-serif;
-}
-
-.welcome-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-
-/* Define la animación */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(-20px); /* Comienza un poco más arriba */
+    background-color: #d4f3fb; /* fondo azul suave */
   }
-  to {
-      opacity: 1;
-      transform: translateY(0); /* Termina en su posición original */
+  
+  header {
+    background-color: #4693c8; /* azul de encabezado como el de gestión de usuarios */
   }
-}
-
-.welcome-message {
-  font-size: 30px;
-  font-weight: bold;
-  color: #0277bd;
- margin-top: -90px;
- margin-right: 10px;
-  animation: fadeIn 1.3s ease-in-out; /* Aplica la animación */
-}
-
-.container {
-  margin-top: 10px;   
-}
-
-.card {
-  text-align: center;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 2px solid #90caf9;
-  border-radius: 10px;
-}
-
-.card-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #0277bd;
-}
-
+  
+  header h1 {
+    color: white;
+  }
+  
+  main h2 {
+    color: #137ac6; /* azul más fuerte para subtítulos */
+  }
+  
+  .custom-card {
+    background-color: white;
+    border: 2px solid #137ac6; /* borde azul como en los botones del panel */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .custom-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(19, 122, 198, 0.2);
+  }
+  
+  footer {
+    background-color: #d4f3fb;
+  }
+  
+  footer p {
+    color: #137ac6;
+  }
+  
