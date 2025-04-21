@@ -1,51 +1,59 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Panel Padre de Familia</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa-pacha</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-<header class="d-flex justify-content-between align-items-center p-3" style="background-color: #d6f3ff;">
-  <div class="d-flex align-items-center">
-    <img src="img/escudo-menu.png" alt="Escudo" class="me-3 mx-auto d-block" style="width: 200px; height: auto;">
-    <div class="fs-5 fw-bold">
-
+    <!-- Encabezado con logo y mensaje de bienvenida -->
+    <div class="welcome-container">
+        <div class="santa-pacha">
+            <img src="./img/escudo-menu.png" alt="Santa Pacha Logo" style="width: 200px; height: auto;">
+        </div>
+        <div class="welcome-message">¡BIENVENIDO, ADMINISTRADOR!</div>
     </div>
-  </div>
-  <h1 class="fs-3 m-0 text-primary fw-bold">¡BIENVENIDO, PADRE DE FAMILIA!</h1>
 
-</header>
+    <!-- Contenedor principal de la página -->
+    <div class="container">
+        <div class="row g-3">
+            <!-- reportes academicos -->
+            <div class="col-md-4">
+                <a href="reportes/reportes.html" class="text-decoration-none">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                          <img src="https://img.icons8.com/ios/100/000000/document.png" alt="Ver Reportes Académicos" class="mb-2 mx-auto d-block" style="width: 90px; height: 90px;">                            <h5 class="card-title mt-2">Ver reportes</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-<nav class="container my-5">
-  <div class="row g-4">
-    <div class="col-12 col-sm-6 col-lg-4">
-      <a class="text-decoration-none text-center card p-3 shadow-sm h-100" href="reportes/reportes.html" style="background-color: white; border: 2px solid #00aaff;">
-        <img src="https://img.icons8.com/ios/100/000000/document.png" alt="Ver Reportes Académicos" class="mb-2 mx-auto d-block" style="width: 90px; height: 90px;">
-        <p class="fw-bold text-dark">Ver Reportes Académicos</p>
-      </a>
+            <!-- notas-->
+            <div class="col-md-4">
+                <a href="notas/notas.html" class="text-decoration-none">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                          <img src="https://img.icons8.com/color/96/000000/error--v1.png" alt="Ver Notas" class="mb-2 mx-auto d-block" style="width: 90px; height: 90px;">                            <h5 class="card-title mt-2">Ver notas</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- notificaciones -->
+            <div class="col-md-4">
+                <a href="notificaciones/notificaciones.html" class="text-decoration-none">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                          <img src="https://img.icons8.com/ios-filled/100/000000/bell.png" alt="Notificaciones" class="mb-2 mx-auto d-block" style="width: 90px; height: 90px;">                            <h5 class="card-title mt-2">Notificaciones</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="col-12 col-sm-6 col-lg-4">
-      <a class="text-decoration-none text-center card p-3 shadow-sm h-100" href="notas/notas.html" style="background-color: white; border: 2px solid #00aaff;">
-        <img src="https://img.icons8.com/color/96/000000/error--v1.png" alt="Ver Notas" class="mb-2 mx-auto d-block" style="width: 90px; height: 90px;">
-        <p class="fw-bold text-dark">Ver Notas</p>
-      </a>
-    </div>
-    <div class="col-12 col-sm-6 col-lg-4">
-      <a class="text-decoration-none text-center card p-3 shadow-sm h-100" href="notificaciones/notificaciones.html" style="background-color: white; border: 2px solid #00aaff;">
-        <img src="https://img.icons8.com/ios-filled/100/000000/bell.png" alt="Notificaciones" class="mb-2 mx-auto d-block" style="width: 90px; height: 90px;">
-        <p class="fw-bold text-dark">Notificaciones</p>
-      </a>
-    </div>
-</nav>
 
-<footer class="text-center" style="background-color: #d6f3ff; padding: 15px;">
-  <p class="mb-0 text-dark">&copy; 2025 Colegio Santa Pacha - Todos los derechos reservados.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
