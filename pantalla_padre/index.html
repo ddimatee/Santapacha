@@ -1,76 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santa-pacha</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santa-pacha</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Encabezado con logo y mensaje de bienvenida alineado a la derecha -->
-    <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
-        <div class="santa-pacha">
-            <img src="./img/escudo-menu.png" alt="Santa Pacha Logo" style="width: 200px; height: auto;">
-        </div>
-        <div class="welcome-message text-end text-primary fw-bold fs-3">
-            ¡BIENVENIDO, PADRE!
-        </div>
+
+  <!-- Encabezado -->
+  <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
+    <div class="santa-pacha">
+      <img src="./img/escudo-menu.png" alt="Santa Pacha Logo" style="width: 200px; height: auto;">
+    </div>
+    <div class="welcome-message text-end fw-bold fs-3" style="color: #0277bd;">
+        ¡BIENVENIDO, PADRE!
+      </div>
+      
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="container">
+    <div class="row g-4 justify-content-center mt-4">
+      <!-- Reportes académicos -->
+      <div class="col-md-3">
+        <a href="reportes/reportes.html" class="text-decoration-none">
+          <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+              <img src="https://img.icons8.com/ios/100/000000/document.png" alt="Ver Reportes Académicos" class="mb-2" style="width: 90px; height: 90px;">
+              <h5 class="card-title">Ver reportes</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Notas -->
+      <div class="col-md-3">
+        <a href="notas/notas.html" class="text-decoration-none">
+          <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+              <img src="https://img.icons8.com/color/96/000000/error--v1.png" alt="Ver Notas" class="mb-2" style="width: 90px; height: 90px;">
+              <h5 class="card-title">Ver notas de Hijo</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Notificaciones -->
+      <div class="col-md-3">
+        <a href="notificaciones/notificaciones.html" class="text-decoration-none">
+          <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+              <img src="https://img.icons8.com/ios-filled/100/000000/bell.png" alt="Notificaciones" class="mb-2" style="width: 90px; height: 90px;">
+              <h5 class="card-title">Notificaciones</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Boletines -->
+      <div class="col-md-3">
+        <a href="boletines/boletin.html" class="text-decoration-none">
+          <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+              <img src="https://img.icons8.com/ios-filled/100/000000/school.png" alt="Ver Boletines" class="mb-2" style="width: 90px; height: 90px;">
+              <h5 class="card-title">Ver boletines</h5>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
 
-    <!-- Contenedor principal de la página -->
-    <div class="container">
-        <div class="row g-4 justify-content-center mt-4">
-            <!-- Reportes académicos -->
-            <div class="col-md-3">
-                <a href="reportes/reportes.html" class="text-decoration-none">
-                    <div class="card shadow-sm h-100">
-                        <div class="card-body text-center">
-                            <img src="https://img.icons8.com/ios/100/000000/document.png" alt="Ver Reportes Académicos" class="mb-2" style="width: 90px; height: 90px;">
-                            <h5 class="card-title">Ver reportes</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Notas -->
-            <div class="col-md-3">
-                <a href="notas/notas.html" class="text-decoration-none">
-                    <div class="card shadow-sm h-100">
-                        <div class="card-body text-center">
-                            <img src="https://img.icons8.com/color/96/000000/error--v1.png" alt="Ver Notas" class="mb-2" style="width: 90px; height: 90px;">
-                            <h5 class="card-title">Ver notas de Hijo</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Notificaciones -->
-            <div class="col-md-3">
-                <a href="notificaciones/notificaciones.html" class="text-decoration-none">
-                    <div class="card shadow-sm h-100">
-                        <div class="card-body text-center">
-                            <img src="https://img.icons8.com/ios-filled/100/000000/bell.png" alt="Notificaciones" class="mb-2" style="width: 90px; height: 90px;">
-                            <h5 class="card-title">Notificaciones</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Boletines -->
-            <div class="col-md-3">
-                <a href="boletines/boletin.html" class="text-decoration-none">
-                    <div class="card shadow-sm h-100">
-                        <div class="card-body text-center">
-                            <img src="https://img.icons8.com/ios-filled/100/000000/school.png" alt="Ver Boletines" class="mb-2" style="width: 90px; height: 90px;">
-                            <h5 class="card-title">Ver boletines</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
+    <!-- Tarjeta de Cerrar Sesión -->
+    <div class="text-center mt-5 mb-4">
+      <a href="login.html" class="text-decoration-none">
+        <div class="card shadow-sm d-inline-block" style="width: 200px;">
+          <div class="card-body text-center">
+            <img src="https://img.icons8.com/ios-filled/100/000000/logout-rounded.png" alt="Cerrar sesión" style="width: 80px; height: 80px;" class="mb-2">
+            <h5 class="card-title text-dark">Cerrar sesión</h5>
+          </div>
         </div>
+      </a>
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
