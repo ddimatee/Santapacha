@@ -1,0 +1,12 @@
+body {
+    background-color: #e3f2fd; /* Azul claro */
+  }
+  
+  .table thead {
+    background-color: #81d4fa !important; /* Celeste encabezado */
+  }
+  
+  h1 {
+    font-weight: bold;
+  }
+  
