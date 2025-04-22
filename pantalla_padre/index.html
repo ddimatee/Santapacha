@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Encabezado con logo y mensaje de bienvenida -->
-    <div class="welcome-container"> 
-        <div class="santa-pacha text-center my-3">
+    <!-- Encabezado con logo y mensaje de bienvenida alineado a la derecha -->
+    <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
+        <div class="santa-pacha">
             <img src="./img/escudo-menu.png" alt="Santa Pacha Logo" style="width: 200px; height: auto;">
-            <div class="welcome-message mt-2 fs-4 fw-bold text-primary">¡BIENVENIDO, PADRE!</div>
+        </div>
+        <div class="welcome-message text-end text-primary fw-bold fs-3">
+            ¡BIENVENIDO, PADRE!
         </div>
     </div>
 
     <!-- Contenedor principal de la página -->
     <div class="container">
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4 justify-content-center mt-4">
             <!-- Reportes académicos -->
             <div class="col-md-3">
                 <a href="reportes/reportes.html" class="text-decoration-none">
