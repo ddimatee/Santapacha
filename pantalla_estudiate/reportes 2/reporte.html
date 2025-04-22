@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reportes Académicos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="reporte.css" />
+</head>
+<body>
+  <div class="container" id="contenido-reporte">
+    <h2 class="text-center text-primary mb-4">Reportes Académicos</h2>
+
+    <div class="report-card">
+      <h5 class="section-title">Reporte Bimestral</h5>
+      <table class="table table-bordered text-center">
+        <thead class="table-primary">
+          <tr>
+            <th>Asignatura</th>
+            <th>Bimestre 1</th>
+            <th>Bimestre 2</th>
+            <th>Bimestre 3</th>
+            <th>Bimestre 4</th>
+            <th>Promedio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Matemáticas</td><td>4.5</td><td>4.0</td><td>4.2</td><td>4.3</td><td>4.25</td></tr>
+          <tr><td>Lengua Castellana</td><td>4.7</td><td>4.6</td><td>4.5</td><td>4.8</td><td>4.65</td></tr>
+          <tr><td>Ciencias Naturales</td><td>4.0</td><td>3.9</td><td>4.1</td><td>4.2</td><td>4.05</td></tr>
+          <tr><td>Sociales</td><td>4.3</td><td>4.2</td><td>4.0</td><td>4.5</td><td>4.25</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="report-card">
+      <h5 class="section-title">Reporte Final Anual</h5>
+      <table class="table table-bordered text-center">
+        <thead class="table-primary">
+          <tr>
+            <th>Asignatura</th>
+            <th>Promedio Anual</th>
+            <th>Desempeño</th>
+            <th>Observaciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Matemáticas</td><td>4.25</td><td>Alto</td><td>Buen dominio de los conceptos.</td></tr>
+          <tr><td>Lengua Castellana</td><td>4.65</td><td>Superior</td><td>Excelente expresión oral y escrita.</td></tr>
+          <tr><td>Ciencias Naturales</td><td>4.05</td><td>Básico</td><td>Debe reforzar conceptos de laboratorio.</td></tr>
+          <tr><td>Sociales</td><td>4.25</td><td>Alto</td><td>Participa activamente en discusiones.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="text-center mt-4">
+      <div class="btn-group me-2">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Descargar
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#" onclick="descargarPDF()">PDF</a></li>
+          <li><a class="dropdown-item" href="#" onclick="descargarExcel()">Excel</a></li>
+          <li><a class="dropdown-item" href="#" onclick="descargarWord()">Word</a></li>
+        </ul>
+      </div>
+      <button class="btn btn-secondary" onclick="regresar()">Volver</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="reporte.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
