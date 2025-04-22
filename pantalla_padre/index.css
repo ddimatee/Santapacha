@@ -12,6 +12,7 @@ body {
     padding: 10px 20px;
 }
 
+
 /* Define la animación */
 @keyframes fadeIn {
     from {
@@ -36,7 +37,7 @@ body {
 
 /*Margen de las opciones*/
 .container {
-    margin-top: 10px;   
+    margin-top: 70px;   
 }
 
 /*Estilos para las opciones*/
@@ -44,7 +45,7 @@ body {
     text-align: center;
     padding: 20px;
     background-color: #ffffff;
-    border: 2px solid #90caf9;
+    border: 2px solid transparent;
     border-radius: 10px;
 }
 
@@ -54,3 +55,5 @@ body {
     font-weight: bold;
     color: #0277bd;
 }
+
+
