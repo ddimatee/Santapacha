@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', (e) => {
         const formato = e.target.innerText.includes("PDF") ? "PDF" : "Excel";
         alert(`Descargando reporte en formato ${formato}...`);
-        // Aquí puedes agregar lógica real de descarga si tienes backend
+  
       });
     });
   });
