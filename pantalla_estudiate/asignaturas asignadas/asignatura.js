@@ -16,7 +16,7 @@ const materiasAsignadas = [
   
     const estado = materia.asignado
       ? `<span class="status">Asignado</span>`
-      : `<span class="status" style="background-color:#f59e0b;">No asignado</span>`;
+      : `<span class="status">Asignado</span>`;
   
     li.innerHTML = `
       <div class="subject-info">
