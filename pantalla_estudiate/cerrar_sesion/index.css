@@ -1,0 +1,49 @@
+Css 
+/* Estilo del título */
+h1 {
+    text-align: center;
+    color: #0277bd;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Estilo del body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#rol{
+    cursor: pointer;
+  }
+
+#rol option.hovered {
+    background-color: #0277bd;
+    color: white;
+  }
+  
+/* Estilo del formulario */
+#formularioprincipal {
+    background-color: #caf0f8;
+    
+    color: #0277bd;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Se ajusta hasta un tamaño máximo de 400px */
+}
+
+/* Logo */
+.logo {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
