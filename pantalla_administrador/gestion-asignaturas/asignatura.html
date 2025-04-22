@@ -18,7 +18,7 @@
                     <li class="list-group-item"><a href="#modificar-asignaturas" class="text-decoration-none sidebar-link">Modificar Asignaturas</a></li>
                     <li class="list-group-item"><a href="#crear-asignaturas" class="text-decoration-none sidebar-link">Crear Asignaturas</a></li>
                     <li class="list-group-item"><a href="#borrar-asignaturas" class="text-decoration-none sidebar-link">Borrar Asignaturas</a></li>
-                    <li class="list-group-item"><a href="#asignaturas-asignadas" class="text-decoration-none sidebar-link">Asignaturas Asignadas</a></li>
+                    <li class="list-group-item"><a href="#asignaturas-asignadas" class="text-decoration-none sidebar-link">Ver Asignaturas</a></li>
                     <li class="list-group-item"><a href="../indexv2.html" class="text-decoration-none"><i class="fas fa-arrow-left"></i> Volver al Menú</a></li>
                 </ul>
             </nav>
@@ -84,7 +84,7 @@
 
                 <!-- Asignaturas Asignadas -->
                 <div class="content bg-light p-4 mt-3 d-none" id="asignaturas-asignadas">
-                    <h5>Asignaturas Asignadas</h5>
+                    <h5>Ver Asignaturas</h5>
                     <ul class="list-group" id="asignaturas-asignadas-lista">
                         <li class="list-group-item">Matemáticas - Profesor: Laura Torres</li>
                         <li class="list-group-item">Ciencias - Profesor: Pedro Ramírez</li>
@@ -94,7 +94,7 @@
             </div>
         </div>
     </div>
-    
+
     <script>
     window.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.content').forEach(section => {
@@ -106,7 +106,7 @@
             'modificar-asignaturas': 'Inicio → Gestión de Asignaturas → Modificar Asignaturas',
             'crear-asignaturas': 'Inicio → Gestión de Asignaturas → Crear Asignaturas',
             'borrar-asignaturas': 'Inicio → Gestión de Asignaturas → Borrar Asignaturas',
-            'asignaturas-asignadas': 'Inicio → Gestión de Asignaturas → Asignaturas Asignadas'
+            'asignaturas-asignadas': 'Inicio → Gestión de Asignaturas → Ver Asignaturas'
         };
 
         document.querySelectorAll('.sidebar-link').forEach(link => {
