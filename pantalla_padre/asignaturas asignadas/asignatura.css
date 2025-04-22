@@ -1,0 +1,67 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #dbeafe; /* azul clarito */
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #4693c8;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .subject-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .subject-item {
+    background-color: #e0e7ff;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .subject-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subject-name {
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  
+  .teacher {
+    font-size: 0.9rem;
+    color: #374151;
+  }
+  
+  .status {
+    background-color: #10b981;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
