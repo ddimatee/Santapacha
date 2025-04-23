@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santa Pacha</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de sesion</title>
+
+    <!-- Tu archivo CSS -->
+    <link rel="stylesheet" href="index.css" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
 <body>
-
-<div id="principal">
-    <!-- Caja de login con fondo azul -->
-    <div id="loginBox">
-        <form id="loginForm">
-
-            <h1>BIENVENIDO</h1>
-
-            <div>
-                <label for="rol" id="rol"></label>
-                <select id="roles" name="roles">
-                    <option value="" disabled selected hidden>Rol</option>
-                    <option value="admin">Administrador</option>
-                    <option value="docente">Docente</option>
-                    <option value="Estudiante">Estudiante</option>
-                    <option value="Padre">Padre</option>
-                </select>
-            </div>
-
-            <div>
-                <label for="email"></label>
-                <input type="email" id="email" name="email" placeholder="Correo electrónico" required><br><br>
-            </div>
-
-            <label for="password"></label>
-            <input type="password" id="password" name="password" placeholder="Contraseña" required><br><br>
-
-            <button type="submit">Iniciar sesión</button><br><br>
-        </form>
-
-        <!-- Botón "¿Olvidaste tu contraseña?" fuera del formulario -->
-        <div id="recuperarcontraseña">
-            <button type="button" onclick="restablecercontraseña()">¿Olvidaste tu contraseña?</button>
+    <form id="formularioprincipal">
+        <h1>BIENVENIDO</h1>
+        <img src="logo.png" alt="Logo" class="logo" />
+        
+        <!-- Campo para el rol-->
+        <div class="mb-3">
+            <label for="rol" class="form-label"></label>
+            <select class="form-select text-center" id="rol" aria-label="Selecciona tu rol" required>
+                <option value="" disabled selected>Selecciona tu rol</option>
+                <option value="1">Administrador</option>
+                <option value="2">Docente</option>
+                <option value="3">Estudiante</option>
+                <option value="4">Padre</option>
+            </select>
+            <div class="invalid-feedback">Por favor, selecciona un rol.</div>
         </div>
 
-        <div id="contenedorrecuperarcontraseña" style="display: none;">
-            <h1>Recuperar contraseña</h1>
+        <!-- Campo para correo electrónico -->
+        <div class="mb-3">
+            <label for="emailLogin" class="form-label"></label>
+            <input type="email" class="form-control text-center" id="emailLogin" placeholder="Correo electrónico" required />
+            <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
         </div>
-    </div>
-</div>
 
+        <!-- Campo para contraseña -->
+        <div class="mb-3">
+            <label for="passwordLogin" class="form-label"></label>
+            <div class="input-group">
+                <input type="password" class="form-control text-center" id="passwordLogin" placeholder="Contraseña" required />
+                <button class="btn btn-outline-secondary" type="button">
+                    <i class="bi bi-eye-slash"></i>
+                </button>
+            </div>
+            <div class="invalid-feedback">Por favor, ingresa tu contraseña.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+
+        <div class="text-center mt-3">
+            <a href="Recuperar_contraseña/recuperar.html" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+        </div>
+    </form>
 </body>
 </html>
