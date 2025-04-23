@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estudiantes.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <div class="header">
+        <span>DOCENTE</span>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <span>Inicio → Estudiantes</span>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <div class="card mx-auto">
+            <div class="card-body">
+                <h5 class="card-title text-center mb-4">Lista de Estudiantes</h5>
+                <!-- Filtros -->
+                <form class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label for="grado" class="form-label">Grado</label>
+                        <select id="grado" class="form-select" required>
+                            <option value="">Seleccione un grado</option>
+                            <option value="6">6°</option>
+                            <option value="7">7°</option>
+                            <option value="8">8°</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="periodo" class="form-label">Periodo</label>
+                        <select id="periodo" class="form-select" required>
+                            <option value="">Seleccione un periodo</option>
+                            <option value="Primer Periodo">Primer Periodo</option>
+                            <option value="Segundo Periodo">Segundo Periodo</option>
+                            <option value="Tercer Periodo">Tercer Periodo</option>
+                            <option value="Cuarto Periodo">Cuarto Periodo</option>
+                        </select>
+                    </div>
+                </form>
+
+                <!-- Tabla de estudiantes -->
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Grado</th>
+                                <th>Periodo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Juan</td>
+                                <td>Pérez</td>
+                                <td>6°</td>
+                                <td>Primer Periodo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>María</td>
+                                <td>García</td>
+                                <td>7°</td>
+                                <td>Segundo Periodo</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carlos</td>
+                                <td>Hernández</td>
+                                <td>8°</td>
+                                <td>Tercer Periodo</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Lucía</td>
+                                <td>Martínez</td>
+                                <td>6°</td>
+                                <td>Cuarto Periodo</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Pedro</td>
+                                <td>Gómez</td>
+                                <td>7°</td>
+                                <td>Primer Periodo</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Laura</td>
+                                <td>Fernández</td>
+                                <td>8°</td>
+                                <td>Segundo Periodo</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Andrés</td>
+                                <td>Ramírez</td>
+                                <td>6°</td>
+                                <td>Tercer Periodo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Botón para volver al menú -->
+                <div class="text-center mt-4">
+                    <a href="/Santapacha/pantalla_docente/menu/indexv2.html" class="btn btn-outline-primary">Volver al Menú</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
