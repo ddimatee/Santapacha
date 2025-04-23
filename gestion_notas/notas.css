@@ -35,12 +35,13 @@ body {
 .content-wrapper {
     display: flex;
     min-height: calc(100vh - 106px);
+    
 }
 
 .sidebar {
     width: 280px;
     padding: 20px;
-    background-color: transparent;
+    background-color: white;
 }
 
 .sidebar h2 {
