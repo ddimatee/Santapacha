@@ -1,0 +1,58 @@
+/* Estilos generales para la página */
+body {
+    background-color: #CAF0F8 !important;
+    font-family: Arial, sans-serif;
+}
+
+/* Encabezado con logo y mensaje de bienvenida */
+.welcome-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+/* Define la animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mensaje de bienvenida */
+.welcome-message {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0277bd;
+   margin-top: -90px;
+   margin-right: 10px;
+    animation: fadeIn 1.3s ease-in-out;
+}
+
+/*Margen de las opciones*/
+.container {
+    margin-top: 10px;   
+}
+
+/*Estilos para las opciones*/
+.card {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #90caf9;
+    border-radius: 10px;
+}
+
+/*Tamaño de los titulos de las opciones*/
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0277bd;
+}
+

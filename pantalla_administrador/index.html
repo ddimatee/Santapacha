@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <div class="sidebar"> 
+        <h2>¡Bienvenido, Administrador!</h2>
+        <ul>
+            <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li>
+                <a href="#" onclick="toggleSubmenu('submenu-grados')">Grados</a>
+            <ul id ="submenu-grados" class="submenu">
+                <li><a href="#" onclick="mostrarSeccion('ver-grados')">Ver grados</a></li>
+                <li><a href="#" onclick="mostrarSeccion('crear-grado')">Crear grado</a></li>
+                <li><a href="#" onclick="mostrarSeccion('eliminar-grado')">Eliminar grado</a></li>
+                <li><a href="#" onclick="mostrarSeccion('modificar-grado')">Modificar grado</a></li>
+                <li><a href="#" onclick="mostrarSeccion('asignar-asignatura-grado')">Asignar asignaturas</a></li>
+            </ul>
+            </li>
+            <li>
+                <a href="#" onclick="toggleSubmenu('submenu-asignaturas')">Asignaturas</a>
+                <ul id="submenu-asignaturas" class="submenu">
+                  <li><a href="#" onclick="mostrarSeccion('ver-asignaturas')">Ver asignaturas</a></li>
+                  <li><a href="#" onclick="mostrarSeccion('agregar-asignatura')">Agregar asignatura</a></li>
+                  <li><a href="#" onclick="mostrarSeccion('eliminar-asignatura')">Eliminar asignatura</a></li>
+                  <li><a href="#" onclick="mostrarSeccion('modificar-asignatura')">Modificar asignatura</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="toggleSubmenu('submenu-docentes')">Docentes</a>
+                <ul id="submenu-docentes" class="submenu">
+                    <li><a href="#" onclick="mostrarSeccion('ver-docentes')">Ver docentes</a></li>
+                    <li><a href="#" onclick="mostrarSeccion('asignar-docente-grado')">Asignar grado</a></li>
+                    <li><a href="#" onclick="mostrarSeccion('asignar-asignatura-docente')">Asignar asignaturas</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="toggleSubmenu('submenu-usuarios')">Usuarios</a>
+            <ul id="submenu-usuarios" class="submenu">
+                <li><a href="#" onclick="mostrarSeccion('ver-usuarios')">Ver usuarios</a></li>
+                <li><a href="#" onclick="mostrarSeccion('crear-usuario')">Crear usuario</a></li>
+                <li><a href="#" onclick="mostrarSeccion('eliminar-usuario')">Eliminar usuario</a></li>
+                <li><a href="#" onclick="mostrarSeccion('modificar-usuario')">Modificar usuario</a></li>
+                
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <img src="img/escudo.jpg" alt="escudo">
+        </div>
+    </div>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <h1 class="title">Santa Pacha</h1>
+        <div class="user-info">
+            <i class="fas fa-user-circle"></i>
+            <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-content">
+        <div id="inicio" class="seccion">Bienvenido al panel principal.</div>
+        <div id="grados" class="seccion" style="display:none;">Bienvenido al panel de grados.</div>
+        <div id="notas" class="seccion" style="display:none;">Bienvenido al panel de notas.</div>
+        <div id="asignaturas" class="seccion" style="display:none;">Bienvenido al panel de asignaturas.</div>
+        <div id="docentes" class="seccion" style="display:none;">Bienvenido al panel de docentes.</div>
+        <div id="ver-asignaturas" class="seccion" style="display:none;">
+            <h2>Lista de Asignaturas</h2>
+            <div id="lista-asignaturas">
+                <!-- Aquí se mostrará la lista de asignaturas -->
+            </div>
+        </div>
+        <div id="agregar-asignatura" class="seccion" style="display:none;">
+
+            <h2>Agregar Asignatura</h2>
+            <form id="form-agregar-asignatura" onsubmit="agregarAsignatura(event)">
+                <label for="nombreAsignatura">Nombre de la Asignatura:</label><br>
+                <input type="text" id="nombreAsignatura" name="nombreAsignatura" required><br><br>
+
+                <label for="cursoAsignatura">Curso:</label><br>
+                <input type="text" id="cursoAsignatura" name="cursoAsignatura" required><br><br>
+
+                <button type="submit">Agregar Asignatura</button>
+            </form>
+            <div id="mensaje-agregar-asignatura" style="margin-top: 10px; color: green;"></div>
+        </div>
+
+        <div id="asignar-docente" class="seccion" style="display:none;">Asignar asignaturas a docentes</div>
+
+        <div id="eliminar-asignatura" class="seccion" style="display:none;">
+            <h2>Eliminar Asignatura</h2>
+            <form id="form-eliminar-asignatura" onsubmit="eliminarAsignatura(event)">
+                <label for="asignaturaSeleccionada">Selecciona una asignatura para eliminar:</label><br>
+                <select id="asignaturaSeleccionada" name="asignaturaSeleccionada" required>
+                    <!-- Las opciones se llenarán dinámicamente -->
+                </select><br><br>
+                <button type="submit">Eliminar Asignatura</button>
+            </form>
+            <div id="mensaje-eliminar-asignatura" style="margin-top: 10px; color: red;"></div>
+        </div>
+        <div id="modificar-asignatura" class="seccion" style="display:none;">
+            <h2>Modificar Asignatura</h2>
+            <form id="form-modificar-asignatura" onsubmit="modificarAsignatura(event)">
+                <label for="asignaturaSeleccionadaModificar">Selecciona una asignatura para modificar:</label><br>
+                <select id="asignaturaSeleccionadaModificar" name="asignaturaSeleccionadaModificar" required>
+                    <!-- Las opciones se llenarán dinámicamente -->
+                </select><br><br>
+
+                <label for="nuevoNombreAsignatura">Nuevo Nombre de la Asignatura:</label><br>
+                <input type="text" id="nuevoNombreAsignatura" name="nuevoNombreAsignatura" required><br><br>
+
+                <label for="nuevoCursoAsignatura">Nuevo Curso:</label><br>
+                <input type="text" id="nuevoCursoAsignatura" name="nuevoCursoAsignatura" required><br><br>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+            <div id="mensaje-modificar-asignatura" style="margin-top: 10px; color: green;"></div>
+        </div>
+
+        <div id="ver-grados" class="seccion" style="display:none;">
+            <h2>Lista de Grados</h2>
+            <div id="lista-grados">
+                <!-- Aquí se mostrará la lista de grados -->
+            </div>
+        </div>
+
+        <div id="crear-grado" class="seccion" style="display:none;">
+            <h2>Crear Grado</h2>
+            <form id="form-crear-grado" onsubmit="crearGrado(event)">
+                <label for="numeroGrado">Número del Grado:</label><br>
+                <input type="text" id="numeroGrado" name="numeroGrado" required><br><br>
+
+                <label for="descripcionGrado">Descripción:</label><br>
+                <textarea id="descripcionGrado" name="descripcionGrado" rows="4" required></textarea><br><br>
+
+                <button type="submit">Crear Grado</button>
+            </form>
+            <div id="mensaje-crear-grado" style="margin-top: 10px; color: green;"></div>
+        </div>
+
+        <div id="eliminar-grado" class="seccion" style="display:none;">
+            <h2>Eliminar Grado</h2>
+            <form id="form-eliminar-grado" onsubmit="eliminarGrado(event)">
+                <label for="gradoSeleccionado">Selecciona un grado para eliminar:</label><br>
+                <select id="gradoSeleccionado" name="gradoSeleccionado" required>
+                    <!-- Las opciones se llenarán dinámicamente -->
+                </select><br><br>
+                <button type="submit">Eliminar Grado</button>
+            </form>
+            <div id="mensaje-eliminar-grado" style="margin-top: 10px; color: red;"></div>
+        </div>
+
+        <div id="modificar-grado" class="seccion" style="display:none;">
+            <h2>Modificar Grado</h2>
+            <form id="form-modificar-grado" onsubmit="modificarGrado(event)">
+                <label for="gradoSeleccionadoModificar">Selecciona un grado para modificar:</label><br>
+                <select id="gradoSeleccionadoModificar" name="gradoSeleccionadoModificar" required>
+                    <!-- Las opciones se llenarán dinámicamente -->
+                </select><br><br>
+
+                <label for="nuevoNombreGrado">Nuevo Nombre del Grado:</label><br>
+                <input type="text" id="nuevoNombreGrado" name="nuevoNombreGrado" required><br><br>
+
+                <label for="nuevaDescripcionGrado">Nueva Descripción:</label><br>
+                <textarea id="nuevaDescripcionGrado" name="nuevaDescripcionGrado" rows="4" required></textarea><br><br>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+            <div id="mensaje-modificar-grado" style="margin-top: 10px; color: green;"></div>
+        </div>
+        <div id="asignar-asignatura-grado" class="seccion" style="display:none;">Asignar asignaturas a grado</div>
+        <div id="asignar-docente-grado" class="seccion" style="display:none;">
+            <h2>Asignar Grado a un Docente</h2>
+            <form id="form-asignar-grado" onsubmit="asignarGrado(event)">
+                <label for="gradoSeleccionadoAsignar">Selecciona un grado:</label><br>
+                <select id="gradoSeleccionadoAsignar" name="gradoSeleccionadoAsignar" required>
+                    <!-- Las opciones se llenarán dinámicamente -->
+                </select><br><br>
+
+                <label for="docenteSeleccionado">Selecciona un docente:</label><br>
+                <select id="docenteSeleccionado" name="docenteSeleccionado" required>
+                    <!-- Las opciones de docentes se llenarán dinámicamente -->
+                </select><br><br>
+
+                <button type="submit">Asignar Grado</button>
+            </form>
+            <div id="mensaje-asignar-grado" style="margin-top: 10px; color: green;"></div>
+        </div>
+        <div id="ver-docentes" class="seccion" style="display:none;">
+
+            <h2>Lista de Docentes</h2>
+            <div id="lista-docentes">
+                <!-- Aquí se mostrará la lista de docentes -->
+            </div>
+        </div>
+
+        <div id="asignar-docente-grado" class="seccion" style="display:none;">
+            <h2>Asignar Grado a un Docente</h2>
+            <form id="form-asignar-grado" onsubmit="asignarGrado(event)">
+                <label for="gradoSeleccionadoAsignar">Selecciona un grado:</label><br>
+                <select id="gradoSeleccionadoAsignar" name="gradoSeleccionadoAsignar" required>
+                    <!-- Las opciones se llenarán dinámicamente -->
+                </select><br><br>
+
+                <label for="docenteSeleccionado">Selecciona un docente:</label><br>
+                <select id="docenteSeleccionado" name="docenteSeleccionado" required>
+                    <!-- Las opciones de docentes se llenarán dinámicamente -->
+                </select><br><br>
+
+                <button type="submit">Asignar Grado</button>
+            </form>
+            <div id="mensaje-asignar-grado" style="margin-top: 10px; color: green;"></div>
+        </div>
+
+        <div id="asignar-asignatura-docente" class="seccion" style="display:none;">
+            <h2>Asignar Asignaturas a un Docente</h2>
+            <form id="form-asignar-asignatura-docente" onsubmit="asignarAsignaturasADocente(event)">
+                <label for="docenteSeleccionadoAsignatura">Selecciona un docente:</label><br>
+                <select id="docenteSeleccionadoAsignatura" name="docenteSeleccionadoAsignatura" required>
+                    <!-- Las opciones de docentes se llenarán dinámicamente -->
+                </select><br><br>
+                <label for="asignaturasSeleccionadas">Selecciona una asignatura:</label><br>
+                <select id="asignaturasSeleccionadas"  name="asignaturasSeleccionadas" required>
+                    <!-- Las opciones de asignaturas se llenarán dinámicamente -->
+                </select><br><br>
+
+                <button type="submit">Asignar Asignaturas</button>
+            </form>
+            <div id="mensaje-asignar-asignatura-docente" style="margin-top: 10px; color: green;"></div>
+        </div>
+
+        <div id="ver-usuarios" class="seccion" style="display:none;">
+            <h2>Usuarios Disponibles</h2>
+            <div id="lista-usuarios">
+                <!-- Aquí se mostrará la lista de usuarios -->
+            </div>
+        </div>
+
+        <div id="crear-usuario" class="seccion" style="display:none;">
+            <h2>Crear Usuario</h2>
+            <form id="form-crear-usuario" onsubmit="crearUsuario(event)">
+        <label for="nombreUsuario">Nombre:</label><br>
+        <input type="text" id="nombreUsuario" name="nombreUsuario" required><br><br>
+
+        <label for="apellidoUsuario">Apellido:</label><br>
+        <input type="text" id="apellidoUsuario" name="apellidoUsuario" required><br><br>
+
+        <label for="tipoIdentificacion">Tipo de Identificación:</label><br>
+        <select id="tipoIdentificacion" name="tipoIdentificacion" required>
+            <option value="CC">Cédula de Ciudadanía</option>
+            <option value="TI">Tarjeta de Identidad</option>
+            <option value="CE">Cédula de Extranjería</option>
+            <option value="PA">Pasaporte</option>
+        </select><br><br>
+
+        <label for="numeroIdentificacion">Número de Identificación:</label><br>
+        <input type="text" id="numeroIdentificacion" name="numeroIdentificacion" required><br><br>
+
+        <label for="emailUsuario">Correo Electrónico:</label><br>
+        <input type="email" id="emailUsuario" name="emailUsuario" required><br><br>
+
+        <label for="rolUsuario">Rol:</label><br>
+        <select id="rolUsuario" name="rolUsuario" required>
+            <option value="admin">Administrador</option>
+            <option value="docente">Docente</option>
+            <option value="estudiante">Estudiante</option>
+        </select><br><br>
+
+        <button type="submit">Crear Usuario</button>
+    </form>
+    <div id="mensaje-usuario" style="margin-top: 10px; color: green;"></div>
+        </div>
+
+
+        <div id="eliminar-usuario" class="seccion" style="display:none;">
+            <h2>Eliminar Usuario</h2>
+            <form id="form-eliminar-usuario" onsubmit="eliminarUsuario(event)">
+        <label for="usuarioSeleccionado">Selecciona un usuario para eliminar:</label><br>
+        <select id="usuarioSeleccionado" name="usuarioSeleccionado" required>
+            <!-- Las opciones se llenarán dinámicamente -->
+        </select><br><br>
+        <button type="submit">Eliminar Usuario</button>
+    </form>
+    <div id="mensaje-eliminar-usuario" style="margin-top: 10px; color: red;"></div>
+        </div>
+
+        <div id="modificar-usuario" class="seccion" style="display:none;">
+            <h2>Modificar Usuario</h2>
+            <form id="form-modificar-usuario" onsubmit="modificarUsuario(event)">
+                <label for="usuarioModificar">Selecciona un usuario para modificar:</label><br>
+                <select id="usuarioModificar" name="usuarioModificar" required>
+            <!-- Las opciones se llenarán dinámicamente -->
+
+                </select><br><br>
+
+                <label for="nuevoNombre">Nuevo Nombre:</label><br>
+                <input type="text" id="nuevoNombre" name="nuevoNombre" required><br><br>
+        
+                <label for="nuevoApellido">Nuevo Apellido:</label><br>
+                <input type="text" id="nuevoApellido" name="nuevoApellido" required><br><br>
+        
+                <label for="nuevoTipoIdentificacion">Nuevo Tipo de Identificación:</label><br>
+                <select id="nuevoTipoIdentificacion" name="nuevoTipoIdentificacion" required>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="TI">Tarjeta de Identidad</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                    <option value="PA">Pasaporte</option>
+                </select><br><br>
+        
+                <label for="nuevoNumeroIdentificacion">Nuevo Número de Identificación:</label><br>
+                <input type="text" id="nuevoNumeroIdentificacion" name="nuevoNumeroIdentificacion" required><br><br>
+        
+                <label for="nuevoEmail">Nuevo Correo Electrónico:</label><br>
+                <input type="email" id="nuevoEmail" name="nuevoEmail" required><br><br>
+        
+                <label for="nuevoRol">Nuevo Rol:</label><br>
+                <select id="nuevoRol" name="nuevoRol" required>
+                    <option value="admin">Administrador</option>
+                    <option value="docente">Docente</option>
+                    <option value="estudiante">Estudiante</option>
+                </select><br><br>
+        
+                <button type="submit">Guardar Cambios</button>
+            </form>
+            <div id="mensaje-modificar-usuario" style="margin-top: 10px; color: green;"></div>
+        </div>
+    </div>
+
+<script src="index.js" crossorigin="anonymous"></script>
+</body>
+</html>
