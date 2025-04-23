@@ -1,67 +1,86 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #dbeafe; /* azul clarito */
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #4693c8;
-    color: white;
-    padding: 1rem 2rem;
-    text-align: center;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .subject-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .subject-item {
-    background-color: #e0e7ff;
-    padding: 1rem;
-    margin-bottom: 0.8rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .subject-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .subject-name {
-    font-weight: 600;
-    font-size: 1.05rem;
-  }
-  
-  .teacher {
-    font-size: 0.9rem;
-    color: #374151;
-  }
-  
-  .status {
-    background-color: #10b981;
-    color: white;
-    padding: 0.3rem 0.7rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-  
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #dbeafe; /* azul clarito */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4693c8;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subject-list {
+  list-style: none;
+  padding: 0;
+}
+
+.subject-item {
+  background-color: #e0e7ff;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subject-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.subject-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.teacher {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.status {
+  background-color: #10b981;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Estilo para el botón de volver, tamaño reducido */
+.btn-volver {
+  background-color: #dbeafe; /* Mismo color que el fondo */
+  color: #0277bd; /* Texto en azul más fuerte */
+  font-size: 1.2rem; /* Tamaño de texto reducido */
+  padding: 10px 25px; /* Menos padding */
+  border: 2px solid #0277bd; /* Borde azul más fuerte */
+  border-radius: 8px; /* Bordes más suaves */
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-volver:hover {
+  background-color: #0288d1; /* Azul más oscuro en hover */
+  color: white; /* Cambiar el texto a blanco */
+  transform: scale(1.05);
+}
