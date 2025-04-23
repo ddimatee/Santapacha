@@ -1,0 +1,25 @@
+body {
+    background-color: #ADD8E6; /* Azul claro */
+  }
+  
+  .container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .report-card {
+    margin-bottom: 30px;
+  }
+  
+  .table-primary {
+    background-color: #ADD8E6 !important; /* Azul claro en encabezado de tablas */
+  }
+  
+  .section-title {
+    color: #1E90FF; /* Azul intenso para títulos */
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  

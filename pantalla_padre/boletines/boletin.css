@@ -1,0 +1,21 @@
+body {
+    background-color: #d9f4fb; /* azul clarito de fondo como en la imagen */
+  }
+  
+  .card {
+    background-color: #e7f7fc; /* fondo interno claro */
+  }
+  
+  .table {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table th {
+    text-align: center;
+  }
+  
+  .table td {
+    vertical-align: middle;
+  }
+  

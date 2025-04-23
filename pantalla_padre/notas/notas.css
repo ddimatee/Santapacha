@@ -1,0 +1,34 @@
+body {
+  background-color: #d4f3fb; /* fondo azul suave */
+}
+
+header {
+  background-color: #4693c8; /* azul de encabezado como el de gestión de usuarios */
+}
+
+header h1 {
+  color: white;
+}
+
+main h2 {
+  color: #137ac6; /* azul más fuerte para subtítulos */
+}
+
+.custom-card {
+  background-color: white;
+  border: 2px solid #137ac6; /* borde azul como en los botones del panel */
+  transition: transform 0.2s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(19, 122, 198, 0.2);
+}
+
+footer {
+  background-color: #d4f3fb;
+}
+
+footer p {
+  color: #137ac6;
+}
